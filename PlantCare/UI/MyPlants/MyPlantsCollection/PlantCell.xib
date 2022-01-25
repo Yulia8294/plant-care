@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PlantCell" customModule="PlantCare" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="165" height="220"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="165" height="220"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="_Plant image" translatesAutoresizingMaskIntoConstraints="NO" id="EZS-Hx-5bJ">
+                        <rect key="frame" x="0.0" y="0.0" width="165" height="220"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WYR-kg-23L" customClass="GradientView" customModule="PlantCare" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="165" height="220"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plant name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VKK-wB-fb9">
+                                <rect key="frame" x="8" y="196" width="149" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="VKK-wB-fb9" firstAttribute="leading" secondItem="WYR-kg-23L" secondAttribute="leading" constant="8" id="N14-KV-yE4"/>
+                            <constraint firstAttribute="bottom" secondItem="VKK-wB-fb9" secondAttribute="bottom" constant="8" id="PLe-eJ-vka"/>
+                            <constraint firstAttribute="trailing" secondItem="VKK-wB-fb9" secondAttribute="trailing" constant="8" id="tak-Ia-CMs"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="EZS-Hx-5bJ" secondAttribute="bottom" id="09x-2F-dsQ"/>
+                <constraint firstItem="EZS-Hx-5bJ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Bic-H5-8R9"/>
+                <constraint firstItem="WYR-kg-23L" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="IGs-6Q-GWR"/>
+                <constraint firstAttribute="trailing" secondItem="EZS-Hx-5bJ" secondAttribute="trailing" id="Lc8-xG-jdO"/>
+                <constraint firstItem="WYR-kg-23L" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="WN3-28-B3T"/>
+                <constraint firstItem="EZS-Hx-5bJ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="jJ1-el-bRD"/>
+                <constraint firstAttribute="bottom" secondItem="WYR-kg-23L" secondAttribute="bottom" id="lhd-tp-HNs"/>
+                <constraint firstAttribute="trailing" secondItem="WYR-kg-23L" secondAttribute="trailing" id="v6S-Nj-xdh"/>
+            </constraints>
+            <size key="customSize" width="165" height="220"/>
+            <connections>
+                <outlet property="gradientView" destination="WYR-kg-23L" id="cbB-nE-Hm1"/>
+            </connections>
+            <point key="canvasLocation" x="221.01449275362322" y="177.45535714285714"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="_Plant image" width="167" height="229"/>
+    </resources>
+</document>
