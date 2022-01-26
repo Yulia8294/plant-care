@@ -298,7 +298,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.nib` struct is generated, and contains static references to 3 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 4 nibs.
   struct nib {
     /// Nib `PickRoomCell`.
     static let pickRoomCell = _R.nib._PickRoomCell()
@@ -306,6 +306,8 @@ struct R: Rswift.Validatable {
     static let plantCell = _R.nib._PlantCell()
     /// Nib `PlantInfoView`.
     static let plantInfoView = _R.nib._PlantInfoView()
+    /// Nib `WateringCell`.
+    static let wateringCell = _R.nib._WateringCell()
 
     #if os(iOS) || os(tvOS)
     /// `UINib(name: "PickRoomCell", in: bundle)`
@@ -331,6 +333,14 @@ struct R: Rswift.Validatable {
     }
     #endif
 
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "WateringCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.wateringCell) instead")
+    static func wateringCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.wateringCell)
+    }
+    #endif
+
     static func pickRoomCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> PickRoomCell? {
       return R.nib.pickRoomCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? PickRoomCell
     }
@@ -341,6 +351,10 @@ struct R: Rswift.Validatable {
 
     static func plantInfoView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
       return R.nib.plantInfoView.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+    }
+
+    static func wateringCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> WateringCell? {
+      return R.nib.wateringCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? WateringCell
     }
 
     fileprivate init() {}
@@ -428,6 +442,17 @@ struct _R: Rswift.Validatable {
       fileprivate init() {}
     }
 
+    struct _WateringCell: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "WateringCell"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> WateringCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? WateringCell
+      }
+
+      fileprivate init() {}
+    }
+
     fileprivate init() {}
   }
   #endif
@@ -458,15 +483,25 @@ struct _R: Rswift.Validatable {
 
       let addPlantPictureController = StoryboardViewControllerResource<AddPlantPictureController>(identifier: "AddPlantPictureController")
       let bundle = R.hostingBundle
+      let choosePlantTitleController = StoryboardViewControllerResource<ChoosePlantTitleController>(identifier: "ChoosePlantTitleController")
       let name = "AddPlant"
       let pickRoomController = StoryboardViewControllerResource<PickRoomController>(identifier: "PickRoomController")
+      let setWateringCycleController = StoryboardViewControllerResource<SetWateringCycleController>(identifier: "SetWateringCycleController")
 
       func addPlantPictureController(_: Void = ()) -> AddPlantPictureController? {
         return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: addPlantPictureController)
       }
 
+      func choosePlantTitleController(_: Void = ()) -> ChoosePlantTitleController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: choosePlantTitleController)
+      }
+
       func pickRoomController(_: Void = ()) -> PickRoomController? {
         return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: pickRoomController)
+      }
+
+      func setWateringCycleController(_: Void = ()) -> SetWateringCycleController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: setWateringCycleController)
       }
 
       static func validate() throws {
@@ -474,7 +509,9 @@ struct _R: Rswift.Validatable {
         if #available(iOS 11.0, tvOS 11.0, *) {
         }
         if _R.storyboard.addPlant().addPlantPictureController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'addPlantPictureController' could not be loaded from storyboard 'AddPlant' as 'AddPlantPictureController'.") }
+        if _R.storyboard.addPlant().choosePlantTitleController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'choosePlantTitleController' could not be loaded from storyboard 'AddPlant' as 'ChoosePlantTitleController'.") }
         if _R.storyboard.addPlant().pickRoomController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'pickRoomController' could not be loaded from storyboard 'AddPlant' as 'PickRoomController'.") }
+        if _R.storyboard.addPlant().setWateringCycleController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'setWateringCycleController' could not be loaded from storyboard 'AddPlant' as 'SetWateringCycleController'.") }
       }
 
       fileprivate init() {}

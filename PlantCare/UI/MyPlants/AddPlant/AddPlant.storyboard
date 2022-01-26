@@ -30,7 +30,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="BOe-mK-02f">
-                                <rect key="frame" x="40" y="602" width="334" height="110"/>
+                                <rect key="frame" x="40" y="419" width="334" height="110"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ot-RO-dyQ">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="45"/>
@@ -39,7 +39,7 @@
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Take a picture" cornerStyle="large">
-                                            <color key="baseBackgroundColor" red="0.3803921569" green="0.68627450980000004" blue="0.16862745100000001" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                            <color key="baseBackgroundColor" red="0.56751224544498469" green="0.68627450980000004" blue="0.16862745100000001" alpha="0.9164708473427402" colorSpace="calibratedRGB"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="didPressTakePicutreButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="WOA-0V-N1P"/>
@@ -61,15 +61,32 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DhL-Ok-bbH">
+                                <rect key="frame" x="40" y="787" width="334" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="33L-y2-1d3"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="NEXT" cornerStyle="large">
+                                    <color key="baseBackgroundColor" red="0.3803921569" green="0.68627450980000004" blue="0.16862745100000001" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="didPressNextStep:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="QEJ-JF-qpP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="BOe-mK-02f" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="2cy-j0-bhm"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="DhL-Ok-bbH" secondAttribute="bottom" constant="30" id="5bg-EJ-WPF"/>
                             <constraint firstItem="09B-Cd-Nko" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" multiplier="0.6" id="Glk-Tm-MeE"/>
                             <constraint firstItem="BOe-mK-02f" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="MYL-wV-2Io"/>
                             <constraint firstItem="09B-Cd-Nko" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Mw0-nw-D2l"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="BOe-mK-02f" secondAttribute="bottom" constant="150" id="qCe-wc-dE4"/>
+                            <constraint firstItem="DhL-Ok-bbH" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="PCP-dt-nST"/>
+                            <constraint firstItem="DhL-Ok-bbH" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="PwX-Ax-k7B"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="DhL-Ok-bbH" secondAttribute="trailing" constant="40" id="QJo-rK-h1d"/>
+                            <constraint firstItem="BOe-mK-02f" firstAttribute="top" secondItem="09B-Cd-Nko" secondAttribute="bottom" constant="50" id="wp6-5n-mZg"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="BOe-mK-02f" secondAttribute="trailing" constant="40" id="xZN-k0-ipL"/>
                         </constraints>
                     </view>
@@ -79,7 +96,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="69.565217391304358" y="91.741071428571431"/>
+            <point key="canvasLocation" x="86" y="78"/>
         </scene>
         <!--PIck a room-->
         <scene sceneID="v1J-T6-SQe">
@@ -124,6 +141,126 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aR7-Uy-3bG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-745" y="92"/>
+        </scene>
+        <!--Choose Plant Title Controller-->
+        <scene sceneID="cdn-Hk-FGe">
+            <objects>
+                <viewController storyboardIdentifier="ChoosePlantTitleController" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="TOg-gW-kMy" customClass="ChoosePlantTitleController" customModule="PlantCare" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fiv-GH-pP0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="Qtv-BN-UEU">
+                                <rect key="frame" x="107" y="169" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="22y-2w-Fwv"/>
+                                    <constraint firstAttribute="height" constant="200" id="NvO-WX-QQ1"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="100"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="iC0-Pj-BCY">
+                                <rect key="frame" x="40" y="419" width="334" height="110"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter plant name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6oQ-R6-RVU">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="Q0R-Yo-ps7"/>
+                                        </constraints>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gIY-Qa-0b7">
+                                        <rect key="frame" x="0.0" y="65" width="334" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="Of8-tC-YrC"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Generate Random Name" cornerStyle="large">
+                                            <color key="baseForegroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="baseBackgroundColor" red="0.3803921569" green="0.68627450980000004" blue="0.16862745100000001" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="didPressGeneratePlantNameButton:" destination="TOg-gW-kMy" eventType="touchUpInside" id="lz9-oe-cbj"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wcn-gd-6qa">
+                                <rect key="frame" x="40" y="787" width="334" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="gFz-RB-RgK"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="NEXT" cornerStyle="large">
+                                    <color key="baseBackgroundColor" red="0.3803921569" green="0.68627450980000004" blue="0.16862745100000001" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="didPressNextButton:" destination="TOg-gW-kMy" eventType="touchUpInside" id="ezx-dC-Uok"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="F4E-aL-N5W"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iC0-Pj-BCY" firstAttribute="centerX" secondItem="Fiv-GH-pP0" secondAttribute="centerX" id="Jfo-bS-yZX"/>
+                            <constraint firstItem="Wcn-gd-6qa" firstAttribute="leading" secondItem="F4E-aL-N5W" secondAttribute="leading" constant="40" id="PAi-zb-fq3"/>
+                            <constraint firstItem="Qtv-BN-UEU" firstAttribute="centerY" secondItem="Fiv-GH-pP0" secondAttribute="centerY" multiplier="0.6" id="QTQ-Hg-7fA"/>
+                            <constraint firstItem="F4E-aL-N5W" firstAttribute="trailing" secondItem="iC0-Pj-BCY" secondAttribute="trailing" constant="40" id="SSk-Tv-Hpb"/>
+                            <constraint firstItem="F4E-aL-N5W" firstAttribute="bottom" secondItem="Wcn-gd-6qa" secondAttribute="bottom" constant="30" id="Tsp-Da-lc5"/>
+                            <constraint firstItem="iC0-Pj-BCY" firstAttribute="top" secondItem="Qtv-BN-UEU" secondAttribute="bottom" constant="50" id="f45-JU-xJG"/>
+                            <constraint firstItem="iC0-Pj-BCY" firstAttribute="leading" secondItem="F4E-aL-N5W" secondAttribute="leading" constant="40" id="nUe-EI-oLY"/>
+                            <constraint firstItem="F4E-aL-N5W" firstAttribute="trailing" secondItem="Wcn-gd-6qa" secondAttribute="trailing" constant="40" id="vJF-xF-tZW"/>
+                            <constraint firstItem="Qtv-BN-UEU" firstAttribute="centerX" secondItem="Fiv-GH-pP0" secondAttribute="centerX" id="wXe-as-ONP"/>
+                            <constraint firstItem="Wcn-gd-6qa" firstAttribute="centerX" secondItem="Fiv-GH-pP0" secondAttribute="centerX" id="xmC-24-gEx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="plantImageView" destination="Qtv-BN-UEU" id="acW-lq-Wu8"/>
+                        <outlet property="plantNameTextField" destination="6oQ-R6-RVU" id="f27-T7-piR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="th3-HO-LAI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="845" y="78"/>
+        </scene>
+        <!--Set Watering Cycle Controller-->
+        <scene sceneID="Znj-Aa-mkp">
+            <objects>
+                <viewController storyboardIdentifier="SetWateringCycleController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vIl-qA-FXy" customClass="SetWateringCycleController" customModule="PlantCare" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WxC-cX-kFf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="rPH-mo-xEK">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="vIl-qA-FXy" id="36w-HK-7Yd"/>
+                                    <outlet property="delegate" destination="vIl-qA-FXy" id="rag-wm-C5N"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cfU-cg-GH2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rPH-mo-xEK" firstAttribute="top" secondItem="cfU-cg-GH2" secondAttribute="top" id="FaW-fF-hRz"/>
+                            <constraint firstItem="cfU-cg-GH2" firstAttribute="trailing" secondItem="rPH-mo-xEK" secondAttribute="trailing" id="Xlh-zN-XpU"/>
+                            <constraint firstItem="rPH-mo-xEK" firstAttribute="leading" secondItem="cfU-cg-GH2" secondAttribute="leading" id="cn0-qO-Enr"/>
+                            <constraint firstItem="cfU-cg-GH2" firstAttribute="bottom" secondItem="rPH-mo-xEK" secondAttribute="bottom" id="dkA-18-STZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="rPH-mo-xEK" id="6zq-6R-nPw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OmV-V1-ne7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1617" y="78"/>
         </scene>
     </scenes>
     <resources>

@@ -17,7 +17,19 @@ class MyPlantsController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        plantsCollectionDataSource.setup(plantsCollection)
+        plantsCollectionDataSource.setup(plantsCollection, viewModel: viewModel)
+        bindViewModel()
+    }
+    
+    func bindViewModel() {
+        viewModel.reload = { [weak self] in
+            self?.plantsCollection.reloadData()
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewModel.getPlants()
     }
     
     @IBAction func didPressAddPlantButton(_ sender: UIBarButtonItem) {

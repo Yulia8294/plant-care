@@ -13,7 +13,7 @@ class AddPlantPictureController: UIViewController {
         
     @IBOutlet weak var plantImage: UIImageView!
     
-    var viewModel: CapturePlantViewModel!
+    var viewModel: AddPlantInfoViewModel!
     
     private let placeholderImage = R.image._PlantImage()!
     private let mediaPicker = MediaPicker()
@@ -23,6 +23,11 @@ class AddPlantPictureController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         bindToViewModel()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewModel.currentStep = .image
     }
     
     private func bindToViewModel() {
@@ -35,12 +40,16 @@ class AddPlantPictureController: UIViewController {
     }
     
     @IBAction func didPressUseDefaultButton(_ sender: UIButton) {
-        viewModel.didPickImage(R.image._PlantImage()!)
+        viewModel.capturedImage = nil
     }
     
     @IBAction func didPressTakePicutreButton(_ sender: UIButton) {
         mediaPicker.showPhotoMenu(presentingController: self, sender: sender) { [weak self] image in
-            self?.viewModel.didPickImage(image)
+            self?.viewModel.capturedImage = image
         }
+    }
+    
+    @IBAction func didPressNextStep(_ sender: UIButton) {
+        viewModel.stepCompleted()
     }
 }

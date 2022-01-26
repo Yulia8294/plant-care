@@ -24,10 +24,12 @@ struct Room {
 
 class RoomsViewModel: NSObject {
     
-    let coordinator: MyPlantsCoordinator
+    let coordinator: AddPlantCoordinator
+    let viewModel: AddPlantInfoViewModel
     
-    init(coordinator: MyPlantsCoordinator) {
+    init(coordinator: AddPlantCoordinator, viewModel: AddPlantInfoViewModel) {
         self.coordinator = coordinator
+        self.viewModel = viewModel
     }
     
     var rooms = [Room]()
@@ -39,9 +41,14 @@ class RoomsViewModel: NSObject {
             reload?()
         }
     }
+    
+    func roomsListWillAppear() {
+        viewModel.currentStep = .room
+    }
         
     func didSelectCell(at indexPath: IndexPath) {
-        coordinator.addPlant(for: rooms[indexPath.row])
+        viewModel.room = rooms[indexPath.row]
+        viewModel.stepCompleted()
     }
     
     func getRooms() {

@@ -17,10 +17,22 @@
 		781001D7279975B000D3EE04 /* MyTasks.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 781001D6279975B000D3EE04 /* MyTasks.storyboard */; };
 		781001D9279975E000D3EE04 /* MyTasksCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781001D8279975E000D3EE04 /* MyTasksCoordinator.swift */; };
 		781001DB279975F600D3EE04 /* MyTasksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781001DA279975F600D3EE04 /* MyTasksViewModel.swift */; };
-		781001DE27997F4000D3EE04 /* CapturePlantViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781001DD27997F4000D3EE04 /* CapturePlantViewModel.swift */; };
+		781001DE27997F4000D3EE04 /* AddPlantInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781001DD27997F4000D3EE04 /* AddPlantInfoViewModel.swift */; };
 		781001E02799836800D3EE04 /* AddPlantPictureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781001DF2799836800D3EE04 /* AddPlantPictureController.swift */; };
 		781001E527998A5E00D3EE04 /* UIView+Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781001E427998A5E00D3EE04 /* UIView+Storyboard.swift */; };
 		781001E727998D6400D3EE04 /* MediaPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781001E627998D6400D3EE04 /* MediaPicker.swift */; };
+		78101D0927A1712E00B9A687 /* UITextField+Publisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78101D0827A1712E00B9A687 /* UITextField+Publisher.swift */; };
+		78101D0B27A1716A00B9A687 /* SetWateringCycleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78101D0A27A1716A00B9A687 /* SetWateringCycleController.swift */; };
+		78101D0F27A171E800B9A687 /* WateringCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78101D0D27A171E800B9A687 /* WateringCell.swift */; };
+		78101D1027A171E800B9A687 /* WateringCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78101D0E27A171E800B9A687 /* WateringCell.xib */; };
+		78101D1227A1726F00B9A687 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78101D1127A1726F00B9A687 /* ShadowView.swift */; };
+		78101D1427A1728E00B9A687 /* CALayer+Shadows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78101D1327A1728E00B9A687 /* CALayer+Shadows.swift */; };
+		78101D1627A17AEC00B9A687 /* ChooseWateringCycleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78101D1527A17AEC00B9A687 /* ChooseWateringCycleViewModel.swift */; };
+		78101D1827A17DD600B9A687 /* UITableViewTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78101D1727A17DD600B9A687 /* UITableViewTools.swift */; };
+		787BBF8727A183E800763CB7 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787BBF8627A183E800763CB7 /* Storage.swift */; };
+		789C319A27A01B6F00177FED /* WateringCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789C319927A01B6F00177FED /* WateringCycle.swift */; };
+		789C319C27A01EE200177FED /* AddPlantCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789C319B27A01EE200177FED /* AddPlantCoordinator.swift */; };
+		789C31A327A03EA000177FED /* ChoosePlantTitleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789C31A227A03EA000177FED /* ChoosePlantTitleController.swift */; };
 		789D2A292799577800154A9F /* PickRoomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789D2A282799577800154A9F /* PickRoomController.swift */; };
 		789D2A2C279957AD00154A9F /* PickRoomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789D2A2B279957AD00154A9F /* PickRoomCell.swift */; };
 		789D2A3027995CF700154A9F /* PickRoomCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789D2A2F27995CF700154A9F /* PickRoomCellViewModel.swift */; };
@@ -62,10 +74,22 @@
 		781001D6279975B000D3EE04 /* MyTasks.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyTasks.storyboard; sourceTree = "<group>"; };
 		781001D8279975E000D3EE04 /* MyTasksCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTasksCoordinator.swift; sourceTree = "<group>"; };
 		781001DA279975F600D3EE04 /* MyTasksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTasksViewModel.swift; sourceTree = "<group>"; };
-		781001DD27997F4000D3EE04 /* CapturePlantViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapturePlantViewModel.swift; sourceTree = "<group>"; };
+		781001DD27997F4000D3EE04 /* AddPlantInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlantInfoViewModel.swift; sourceTree = "<group>"; };
 		781001DF2799836800D3EE04 /* AddPlantPictureController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlantPictureController.swift; sourceTree = "<group>"; };
 		781001E427998A5E00D3EE04 /* UIView+Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Storyboard.swift"; sourceTree = "<group>"; };
 		781001E627998D6400D3EE04 /* MediaPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPicker.swift; sourceTree = "<group>"; };
+		78101D0827A1712E00B9A687 /* UITextField+Publisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Publisher.swift"; sourceTree = "<group>"; };
+		78101D0A27A1716A00B9A687 /* SetWateringCycleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetWateringCycleController.swift; sourceTree = "<group>"; };
+		78101D0D27A171E800B9A687 /* WateringCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WateringCell.swift; sourceTree = "<group>"; };
+		78101D0E27A171E800B9A687 /* WateringCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WateringCell.xib; sourceTree = "<group>"; };
+		78101D1127A1726F00B9A687 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
+		78101D1327A1728E00B9A687 /* CALayer+Shadows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Shadows.swift"; sourceTree = "<group>"; };
+		78101D1527A17AEC00B9A687 /* ChooseWateringCycleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseWateringCycleViewModel.swift; sourceTree = "<group>"; };
+		78101D1727A17DD600B9A687 /* UITableViewTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewTools.swift; sourceTree = "<group>"; };
+		787BBF8627A183E800763CB7 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		789C319927A01B6F00177FED /* WateringCycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WateringCycle.swift; sourceTree = "<group>"; };
+		789C319B27A01EE200177FED /* AddPlantCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlantCoordinator.swift; sourceTree = "<group>"; };
+		789C31A227A03EA000177FED /* ChoosePlantTitleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePlantTitleController.swift; sourceTree = "<group>"; };
 		789D2A282799577800154A9F /* PickRoomController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickRoomController.swift; sourceTree = "<group>"; };
 		789D2A2B279957AD00154A9F /* PickRoomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickRoomCell.swift; sourceTree = "<group>"; };
 		789D2A2F27995CF700154A9F /* PickRoomCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickRoomCellViewModel.swift; sourceTree = "<group>"; };
@@ -140,10 +164,36 @@
 		781001DC27997CA900D3EE04 /* MakePicture */ = {
 			isa = PBXGroup;
 			children = (
-				781001DD27997F4000D3EE04 /* CapturePlantViewModel.swift */,
 				781001DF2799836800D3EE04 /* AddPlantPictureController.swift */,
 			);
 			path = MakePicture;
+			sourceTree = "<group>";
+		};
+		78101D0C27A171D600B9A687 /* WateringCell */ = {
+			isa = PBXGroup;
+			children = (
+				78101D0D27A171E800B9A687 /* WateringCell.swift */,
+				78101D0E27A171E800B9A687 /* WateringCell.xib */,
+			);
+			path = WateringCell;
+			sourceTree = "<group>";
+		};
+		789C319E27A03AA400177FED /* Choose Title */ = {
+			isa = PBXGroup;
+			children = (
+				789C31A227A03EA000177FED /* ChoosePlantTitleController.swift */,
+			);
+			path = "Choose Title";
+			sourceTree = "<group>";
+		};
+		789C31A127A03ABD00177FED /* SetWateringCycle */ = {
+			isa = PBXGroup;
+			children = (
+				78101D0C27A171D600B9A687 /* WateringCell */,
+				78101D0A27A1716A00B9A687 /* SetWateringCycleController.swift */,
+				78101D1527A17AEC00B9A687 /* ChooseWateringCycleViewModel.swift */,
+			);
+			path = SetWateringCycle;
 			sourceTree = "<group>";
 		};
 		789D2A2A2799579000154A9F /* PickRoom */ = {
@@ -198,6 +248,7 @@
 				78B7A605278A035F00CA1CAB /* Info.plist */,
 				78B7A62A278A295C00CA1CAB /* HaveViewModel.swift */,
 				781001D12799742E00D3EE04 /* MainTabBarController.swift */,
+				787BBF8627A183E800763CB7 /* Storage.swift */,
 			);
 			path = PlantCare;
 			sourceTree = "<group>";
@@ -254,6 +305,10 @@
 				781001E427998A5E00D3EE04 /* UIView+Storyboard.swift */,
 				781001C8279966D700D3EE04 /* UIView+Animation.swift */,
 				781001E627998D6400D3EE04 /* MediaPicker.swift */,
+				78101D0827A1712E00B9A687 /* UITextField+Publisher.swift */,
+				78101D1127A1726F00B9A687 /* ShadowView.swift */,
+				78101D1327A1728E00B9A687 /* CALayer+Shadows.swift */,
+				78101D1727A17DD600B9A687 /* UITableViewTools.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -261,9 +316,13 @@
 		78B7A621278A1C5C00CA1CAB /* AddPlant */ = {
 			isa = PBXGroup;
 			children = (
+				789C31A127A03ABD00177FED /* SetWateringCycle */,
+				789C319E27A03AA400177FED /* Choose Title */,
 				781001DC27997CA900D3EE04 /* MakePicture */,
 				789D2A2A2799579000154A9F /* PickRoom */,
 				78B7A626278A1EE900CA1CAB /* AddPlant.storyboard */,
+				781001DD27997F4000D3EE04 /* AddPlantInfoViewModel.swift */,
+				789C319B27A01EE200177FED /* AddPlantCoordinator.swift */,
 			);
 			path = AddPlant;
 			sourceTree = "<group>";
@@ -272,6 +331,7 @@
 			isa = PBXGroup;
 			children = (
 				78B7A62F278A29CA00CA1CAB /* Plant.swift */,
+				789C319927A01B6F00177FED /* WateringCycle.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -355,6 +415,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78101D1027A171E800B9A687 /* WateringCell.xib in Resources */,
 				781001D7279975B000D3EE04 /* MyTasks.storyboard in Resources */,
 				78B7A618278A114200CA1CAB /* PlantCell.xib in Resources */,
 				78B7A604278A035F00CA1CAB /* LaunchScreen.storyboard in Resources */,
@@ -436,7 +497,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				789C319C27A01EE200177FED /* AddPlantCoordinator.swift in Sources */,
+				78101D1627A17AEC00B9A687 /* ChooseWateringCycleViewModel.swift in Sources */,
 				781001D5279975A900D3EE04 /* MyTasksController.swift in Sources */,
+				78101D0927A1712E00B9A687 /* UITextField+Publisher.swift in Sources */,
 				781001CE27996CC400D3EE04 /* AppCoordinator.swift in Sources */,
 				781001E527998A5E00D3EE04 /* UIView+Storyboard.swift in Sources */,
 				789D2A3327995D7400154A9F /* RoomsViewModel.swift in Sources */,
@@ -444,11 +508,15 @@
 				78B7A5F8278A035E00CA1CAB /* AppDelegate.swift in Sources */,
 				781001D9279975E000D3EE04 /* MyTasksCoordinator.swift in Sources */,
 				78B7A617278A114200CA1CAB /* PlantCell.swift in Sources */,
+				78101D1227A1726F00B9A687 /* ShadowView.swift in Sources */,
+				78101D0B27A1716A00B9A687 /* SetWateringCycleController.swift in Sources */,
 				781001E02799836800D3EE04 /* AddPlantPictureController.swift in Sources */,
 				78B7A61A278A11F000CA1CAB /* GradientView.swift in Sources */,
 				781001D02799725F00D3EE04 /* MyPlantsCoordinator.swift in Sources */,
+				78101D1427A1728E00B9A687 /* CALayer+Shadows.swift in Sources */,
 				78B7A5FA278A035E00CA1CAB /* SceneDelegate.swift in Sources */,
 				78B7A633278A2D0F00CA1CAB /* PlantInfoController.swift in Sources */,
+				789C319A27A01B6F00177FED /* WateringCycle.swift in Sources */,
 				781001DB279975F600D3EE04 /* MyTasksViewModel.swift in Sources */,
 				78B7A62B278A295C00CA1CAB /* HaveViewModel.swift in Sources */,
 				78B7A630278A29CA00CA1CAB /* Plant.swift in Sources */,
@@ -461,10 +529,14 @@
 				781001E727998D6400D3EE04 /* MediaPicker.swift in Sources */,
 				789D2A2C279957AD00154A9F /* PickRoomCell.swift in Sources */,
 				78B7A60C278A0A4900CA1CAB /* AppAppearance.swift in Sources */,
+				789C31A327A03EA000177FED /* ChoosePlantTitleController.swift in Sources */,
+				787BBF8727A183E800763CB7 /* Storage.swift in Sources */,
 				781001C9279966D700D3EE04 /* UIView+Animation.swift in Sources */,
 				78B7A62D278A297B00CA1CAB /* MyPlantsViewModel.swift in Sources */,
-				781001DE27997F4000D3EE04 /* CapturePlantViewModel.swift in Sources */,
+				78101D1827A17DD600B9A687 /* UITableViewTools.swift in Sources */,
+				781001DE27997F4000D3EE04 /* AddPlantInfoViewModel.swift in Sources */,
 				78B7A60E278A0BE000CA1CAB /* MyPlantsController.swift in Sources */,
+				78101D0F27A171E800B9A687 /* WateringCell.swift in Sources */,
 				781001CC279969EC00D3EE04 /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

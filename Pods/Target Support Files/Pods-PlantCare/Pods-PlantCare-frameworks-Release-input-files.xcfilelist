@@ -1,4 +1,5 @@
 ${PODS_ROOT}/Target Support Files/Pods-PlantCare/Pods-PlantCare-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Constraint/Constraint.framework
+${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework
 ${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework
 ${BUILT_PRODUCTS_DIR}/SwiftEntryKit/SwiftEntryKit.framework

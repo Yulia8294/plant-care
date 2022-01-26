@@ -29,18 +29,9 @@ class MyPlantsCoordinator: Coordinator {
         navigationController.viewControllers = [myPlantsController]
     }
     
-    func addNewPlant() {
-        let viewController = R.storyboard.addPlant.pickRoomController()!
-        let viewModel = RoomsViewModel(coordinator: self)
-        viewController.viewModel = viewModel
-        navigationController.pushViewController(viewController, animated: true)
+    func addPlant() {
+        let coordinator = AddPlantCoordinator(nav: navigationController)
+        coordinator.start()
     }
-    
-    func addPlant(for room: Room) {
-        let vc = R.storyboard.addPlant.addPlantPictureController()!
-        vc.viewModel = CapturePlantViewModel(coordinator: self)
-        navigationController.pushViewController(vc, animated: true)
-    }
-    
     
 }

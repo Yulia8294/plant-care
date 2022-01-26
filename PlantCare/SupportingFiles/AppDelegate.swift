@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import IQKeyboardManager
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         AppAppearance.setup()
+        
+        IQKeyboardManager.shared().shouldResignOnTouchOutside = true
         
         tabBarController = MainTabBarController()
         window = UIWindow(frame: UIScreen.main.bounds)

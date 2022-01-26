@@ -72,7 +72,9 @@ extension MediaPicker: UIImagePickerControllerDelegate {
         picker.dismiss(animated: true, completion: nil)
         
         if let pickedImage = info[.editedImage] as? UIImage {
-            completion?(pickedImage)
+            DispatchQueue.main.async {
+                self.completion?(pickedImage)
+            }
         }
     }
 }
@@ -87,7 +89,9 @@ extension MediaPicker: PHPickerViewControllerDelegate {
                 guard let img = image else {
                     return
                 }
-                self.completion?(img as! UIImage)
+                DispatchQueue.main.async {
+                    self.completion?(img as! UIImage)
+                }
             }
         }
         

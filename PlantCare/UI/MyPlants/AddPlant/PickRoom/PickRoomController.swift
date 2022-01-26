@@ -26,6 +26,11 @@ class PickRoomController: UIViewController {
         collectionView.contentInset = UIEdgeInsets(top: 10, left: 16, bottom: 10, right: 16)
         initWithModel()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewModel.roomsListWillAppear()
+    }
 }
 
 

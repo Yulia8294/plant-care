@@ -10,5 +10,6 @@ target 'PlantCare' do
  pod 'R.swift'
  pod 'Constraint'
  pod 'SwiftEntryKit'
+ pod 'IQKeyboardManager'
 
 end

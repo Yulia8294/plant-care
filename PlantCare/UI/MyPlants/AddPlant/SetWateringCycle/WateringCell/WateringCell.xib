@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="228" id="wpF-U0-ziR" customClass="WateringCell" customModule="PlantCare" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="539" height="228"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wpF-U0-ziR" id="kHQ-Qe-XBP">
+                <rect key="frame" x="0.0" y="0.0" width="539" height="228"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pMu-c0-G72" userLabel="Container">
+                        <rect key="frame" x="16" y="10" width="507" height="208"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XAi-to-IQc" customClass="ShadowView" customModule="PlantCare" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="507" height="208"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FGE-6I-Frm" userLabel="CardContent">
+                                <rect key="frame" x="0.0" y="0.0" width="507" height="208"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5nu-1u-JNO">
+                                        <rect key="frame" x="16" y="10" width="475" height="188"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="5nu-1u-JNO" firstAttribute="top" secondItem="FGE-6I-Frm" secondAttribute="top" constant="10" id="Uli-wT-FIL"/>
+                                    <constraint firstItem="5nu-1u-JNO" firstAttribute="leading" secondItem="FGE-6I-Frm" secondAttribute="leading" constant="16" id="eHt-oB-2wU"/>
+                                    <constraint firstAttribute="trailing" secondItem="5nu-1u-JNO" secondAttribute="trailing" constant="16" id="iVz-A9-X3f"/>
+                                    <constraint firstAttribute="bottom" secondItem="5nu-1u-JNO" secondAttribute="bottom" constant="10" id="tNx-iQ-HlR"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="FGE-6I-Frm" secondAttribute="bottom" id="1By-AY-Moc"/>
+                            <constraint firstItem="XAi-to-IQc" firstAttribute="leading" secondItem="pMu-c0-G72" secondAttribute="leading" id="29I-HU-6W0"/>
+                            <constraint firstAttribute="trailing" secondItem="FGE-6I-Frm" secondAttribute="trailing" id="3Jr-2t-md8"/>
+                            <constraint firstItem="XAi-to-IQc" firstAttribute="bottom" secondItem="FGE-6I-Frm" secondAttribute="bottom" id="737-JM-TJr"/>
+                            <constraint firstItem="XAi-to-IQc" firstAttribute="leading" secondItem="FGE-6I-Frm" secondAttribute="leading" id="D13-hp-t4j"/>
+                            <constraint firstItem="XAi-to-IQc" firstAttribute="trailing" secondItem="FGE-6I-Frm" secondAttribute="trailing" id="KX2-gR-Yed"/>
+                            <constraint firstItem="FGE-6I-Frm" firstAttribute="top" secondItem="pMu-c0-G72" secondAttribute="top" id="aCN-Se-Xot"/>
+                            <constraint firstAttribute="bottom" secondItem="XAi-to-IQc" secondAttribute="bottom" id="fjG-mk-xN5"/>
+                            <constraint firstItem="FGE-6I-Frm" firstAttribute="leading" secondItem="pMu-c0-G72" secondAttribute="leading" id="gBE-SQ-Y76"/>
+                            <constraint firstAttribute="trailing" secondItem="XAi-to-IQc" secondAttribute="trailing" id="kaV-vI-8X0"/>
+                            <constraint firstItem="XAi-to-IQc" firstAttribute="top" secondItem="pMu-c0-G72" secondAttribute="top" id="x8z-Ef-piQ"/>
+                            <constraint firstItem="XAi-to-IQc" firstAttribute="top" secondItem="FGE-6I-Frm" secondAttribute="top" id="zbP-qq-rSE"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="pMu-c0-G72" firstAttribute="leading" secondItem="kHQ-Qe-XBP" secondAttribute="leading" constant="16" id="3cw-de-BJJ"/>
+                    <constraint firstItem="pMu-c0-G72" firstAttribute="top" secondItem="kHQ-Qe-XBP" secondAttribute="top" constant="10" id="6mP-R0-VoT"/>
+                    <constraint firstAttribute="trailing" secondItem="pMu-c0-G72" secondAttribute="trailing" constant="16" id="I9h-iI-8pJ"/>
+                    <constraint firstAttribute="bottom" secondItem="pMu-c0-G72" secondAttribute="bottom" constant="10" id="nVr-tz-SbQ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="wateringLabel" destination="5nu-1u-JNO" id="3uC-lc-taG"/>
+            </connections>
+            <point key="canvasLocation" x="263.04347826086956" y="116.51785714285714"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -9,7 +9,10 @@ import UIKit
 
 class PlantsCollectionDataSource: NSObject, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    func setup(_ collection: UICollectionView) {
+    var viewModel: MyPlantsViewModel!
+    
+    func setup(_ collection: UICollectionView, viewModel: MyPlantsViewModel) {
+        self.viewModel = viewModel
         collection.delegate = self
         collection.dataSource = self
         collection.registerCell(PlantCell.self)
@@ -19,11 +22,12 @@ class PlantsCollectionDataSource: NSObject, UICollectionViewDelegate, UICollecti
     //MARK: - Collection view delegate & datasource
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        10
+        viewModel.plantsCellViewModels.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         collectionView.cell(PlantCell.self, for: indexPath)
+            .setup(with: viewModel.getCellViewModel(at: indexPath))
     }
     
 //    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
