@@ -18,8 +18,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="watercolor3" translatesAutoresizingMaskIntoConstraints="NO" id="fjF-7l-sXu">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="09B-Cd-Nko">
-                                <rect key="frame" x="107" y="169" width="200" height="200"/>
+                                <rect key="frame" x="107" y="213.5" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="KVr-uj-PQF"/>
                                     <constraint firstAttribute="height" constant="200" id="Oks-VP-kbE"/>
@@ -31,7 +34,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="BOe-mK-02f">
-                                <rect key="frame" x="40" y="419" width="334" height="110"/>
+                                <rect key="frame" x="40" y="463.5" width="334" height="110"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ot-RO-dyQ">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
@@ -82,12 +85,16 @@
                         <constraints>
                             <constraint firstItem="BOe-mK-02f" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="2cy-j0-bhm"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="DhL-Ok-bbH" secondAttribute="bottom" constant="30" id="5bg-EJ-WPF"/>
-                            <constraint firstItem="09B-Cd-Nko" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" multiplier="0.6" id="Glk-Tm-MeE"/>
+                            <constraint firstItem="fjF-7l-sXu" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Euj-Td-C0j"/>
+                            <constraint firstItem="09B-Cd-Nko" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" multiplier="0.7" id="Glk-Tm-MeE"/>
                             <constraint firstItem="BOe-mK-02f" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="MYL-wV-2Io"/>
                             <constraint firstItem="09B-Cd-Nko" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Mw0-nw-D2l"/>
                             <constraint firstItem="DhL-Ok-bbH" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="PCP-dt-nST"/>
                             <constraint firstItem="DhL-Ok-bbH" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="PwX-Ax-k7B"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="DhL-Ok-bbH" secondAttribute="trailing" constant="40" id="QJo-rK-h1d"/>
+                            <constraint firstAttribute="bottom" secondItem="fjF-7l-sXu" secondAttribute="bottom" id="QP3-9W-TzV"/>
+                            <constraint firstItem="fjF-7l-sXu" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="bMC-cH-kVW"/>
+                            <constraint firstItem="fjF-7l-sXu" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="foa-hR-lf6"/>
                             <constraint firstItem="BOe-mK-02f" firstAttribute="top" secondItem="09B-Cd-Nko" secondAttribute="bottom" constant="50" id="wp6-5n-mZg"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="BOe-mK-02f" secondAttribute="trailing" constant="40" id="xZN-k0-ipL"/>
                         </constraints>
@@ -101,7 +108,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="86" y="78"/>
+            <point key="canvasLocation" x="85.507246376811594" y="77.678571428571431"/>
         </scene>
         <!--PIck a room-->
         <scene sceneID="v1J-T6-SQe">
@@ -155,8 +162,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="watercolor2" translatesAutoresizingMaskIntoConstraints="NO" id="qec-9N-W1y">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qtv-BN-UEU">
-                                <rect key="frame" x="107" y="169" width="200" height="200"/>
+                                <rect key="frame" x="107" y="213.5" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="22y-2w-Fwv"/>
                                     <constraint firstAttribute="height" constant="200" id="NvO-WX-QQ1"/>
@@ -168,7 +178,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="iC0-Pj-BCY">
-                                <rect key="frame" x="40" y="419" width="334" height="120"/>
+                                <rect key="frame" x="40" y="463.5" width="334" height="120"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter plant name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6oQ-R6-RVU">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
@@ -226,14 +236,18 @@
                         <constraints>
                             <constraint firstItem="iC0-Pj-BCY" firstAttribute="centerX" secondItem="Fiv-GH-pP0" secondAttribute="centerX" id="Jfo-bS-yZX"/>
                             <constraint firstItem="Wcn-gd-6qa" firstAttribute="leading" secondItem="F4E-aL-N5W" secondAttribute="leading" constant="40" id="PAi-zb-fq3"/>
-                            <constraint firstItem="Qtv-BN-UEU" firstAttribute="centerY" secondItem="Fiv-GH-pP0" secondAttribute="centerY" multiplier="0.6" id="QTQ-Hg-7fA"/>
+                            <constraint firstItem="Qtv-BN-UEU" firstAttribute="centerY" secondItem="Fiv-GH-pP0" secondAttribute="centerY" multiplier="0.7" id="QTQ-Hg-7fA"/>
                             <constraint firstItem="F4E-aL-N5W" firstAttribute="trailing" secondItem="iC0-Pj-BCY" secondAttribute="trailing" constant="40" id="SSk-Tv-Hpb"/>
                             <constraint firstItem="F4E-aL-N5W" firstAttribute="bottom" secondItem="Wcn-gd-6qa" secondAttribute="bottom" constant="30" id="Tsp-Da-lc5"/>
+                            <constraint firstItem="qec-9N-W1y" firstAttribute="trailing" secondItem="F4E-aL-N5W" secondAttribute="trailing" id="eBP-VQ-TsZ"/>
                             <constraint firstItem="iC0-Pj-BCY" firstAttribute="top" secondItem="Qtv-BN-UEU" secondAttribute="bottom" constant="50" id="f45-JU-xJG"/>
+                            <constraint firstItem="qec-9N-W1y" firstAttribute="leading" secondItem="F4E-aL-N5W" secondAttribute="leading" id="mUS-aZ-Gw2"/>
                             <constraint firstItem="iC0-Pj-BCY" firstAttribute="leading" secondItem="F4E-aL-N5W" secondAttribute="leading" constant="40" id="nUe-EI-oLY"/>
+                            <constraint firstItem="qec-9N-W1y" firstAttribute="top" secondItem="Fiv-GH-pP0" secondAttribute="top" id="q0D-LU-dMu"/>
                             <constraint firstItem="F4E-aL-N5W" firstAttribute="trailing" secondItem="Wcn-gd-6qa" secondAttribute="trailing" constant="40" id="vJF-xF-tZW"/>
                             <constraint firstItem="Qtv-BN-UEU" firstAttribute="centerX" secondItem="Fiv-GH-pP0" secondAttribute="centerX" id="wXe-as-ONP"/>
                             <constraint firstItem="Wcn-gd-6qa" firstAttribute="centerX" secondItem="Fiv-GH-pP0" secondAttribute="centerX" id="xmC-24-gEx"/>
+                            <constraint firstAttribute="bottom" secondItem="qec-9N-W1y" secondAttribute="bottom" id="yld-XP-d7u"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Choose Plant Name" id="81E-ba-55p">
@@ -274,7 +288,7 @@
                             <constraint firstItem="cfU-cg-GH2" firstAttribute="bottom" secondItem="rPH-mo-xEK" secondAttribute="bottom" id="dkA-18-STZ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Add watering cycle" id="9ks-M6-Ksa">
+                    <navigationItem key="navigationItem" title="Add watering cycle" largeTitleDisplayMode="always" id="9ks-M6-Ksa">
                         <barButtonItem key="backBarButtonItem" title=" " id="t8l-4N-t03"/>
                     </navigationItem>
                     <connections>
@@ -287,6 +301,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="watercolor2" width="564" height="846"/>
+        <image name="watercolor3" width="658" height="658"/>
         <namedColor name="Accent">
             <color red="0.098039215686274508" green="0.2627450980392157" blue="0.1764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

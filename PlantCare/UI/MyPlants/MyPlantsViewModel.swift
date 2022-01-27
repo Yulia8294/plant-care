@@ -54,7 +54,7 @@ class MyPlantsViewModel: NSObject {
     }
     
     private func createCellModel(plant: Plant) -> PlantCellViewModel {
-        PlantCellViewModel(image: plant.photo.getImage() ?? R.image._PlantImage()!, title: plant.title)
+        PlantCellViewModel(image: plant.photo.getImage() ?? R.image.plantPlaceholder()!, title: plant.title)
     }
     
     func getCellViewModel(at indexPath: IndexPath) -> PlantCellViewModel {

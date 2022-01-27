@@ -337,7 +337,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 15 images.
+  /// This `R.image` struct is generated, and contains static references to 18 images.
   struct image {
     /// Image `Add`.
     static let add = Rswift.ImageResource(bundle: R.hostingBundle, name: "Add")
@@ -351,8 +351,6 @@ struct R: Rswift.Validatable {
     static let image = Rswift.ImageResource(bundle: R.hostingBundle, name: "Image")
     /// Image `Profile`.
     static let profile = Rswift.ImageResource(bundle: R.hostingBundle, name: "Profile")
-    /// Image `_Plant image`.
-    static let _PlantImage = Rswift.ImageResource(bundle: R.hostingBundle, name: "_Plant image")
     /// Image `back`.
     static let back = Rswift.ImageResource(bundle: R.hostingBundle, name: "back")
     /// Image `bathroom`.
@@ -367,8 +365,16 @@ struct R: Rswift.Validatable {
     static let livingroom = Rswift.ImageResource(bundle: R.hostingBundle, name: "livingroom")
     /// Image `office`.
     static let office = Rswift.ImageResource(bundle: R.hostingBundle, name: "office")
+    /// Image `plantPlaceholder`.
+    static let plantPlaceholder = Rswift.ImageResource(bundle: R.hostingBundle, name: "plantPlaceholder")
     /// Image `terrace`.
     static let terrace = Rswift.ImageResource(bundle: R.hostingBundle, name: "terrace")
+    /// Image `watercolor1`.
+    static let watercolor1 = Rswift.ImageResource(bundle: R.hostingBundle, name: "watercolor1")
+    /// Image `watercolor2`.
+    static let watercolor2 = Rswift.ImageResource(bundle: R.hostingBundle, name: "watercolor2")
+    /// Image `watercolor3`.
+    static let watercolor3 = Rswift.ImageResource(bundle: R.hostingBundle, name: "watercolor3")
 
     #if os(iOS) || os(tvOS)
     /// `UIImage(named: "Add", bundle: ..., traitCollection: ...)`
@@ -409,13 +415,6 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "Profile", bundle: ..., traitCollection: ...)`
     static func profile(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.profile, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "_Plant image", bundle: ..., traitCollection: ...)`
-    static func _PlantImage(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image._PlantImage, compatibleWith: traitCollection)
     }
     #endif
 
@@ -469,9 +468,37 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "plantPlaceholder", bundle: ..., traitCollection: ...)`
+    static func plantPlaceholder(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.plantPlaceholder, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "terrace", bundle: ..., traitCollection: ...)`
     static func terrace(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.terrace, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "watercolor1", bundle: ..., traitCollection: ...)`
+    static func watercolor1(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.watercolor1, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "watercolor2", bundle: ..., traitCollection: ...)`
+    static func watercolor2(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.watercolor2, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "watercolor3", bundle: ..., traitCollection: ...)`
+    static func watercolor3(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.watercolor3, compatibleWith: traitCollection)
     }
     #endif
 
@@ -623,7 +650,7 @@ struct _R: Rswift.Validatable {
       }
 
       static func validate() throws {
-        if UIKit.UIImage(named: "_Plant image", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named '_Plant image' is used in nib 'PlantCell', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "plantPlaceholder", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'plantPlaceholder' is used in nib 'PlantCell', but couldn't be loaded.") }
         if #available(iOS 11.0, tvOS 11.0, *) {
         }
       }
@@ -711,6 +738,8 @@ struct _R: Rswift.Validatable {
       }
 
       static func validate() throws {
+        if UIKit.UIImage(named: "watercolor2", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'watercolor2' is used in storyboard 'AddPlant', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "watercolor3", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'watercolor3' is used in storyboard 'AddPlant', but couldn't be loaded.") }
         if #available(iOS 11.0, tvOS 11.0, *) {
           if UIKit.UIColor(named: "Accent", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'Accent' is used in storyboard 'AddPlant', but couldn't be loaded.") }
           if UIKit.UIColor(named: "BackgroundDarker", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'BackgroundDarker' is used in storyboard 'AddPlant', but couldn't be loaded.") }

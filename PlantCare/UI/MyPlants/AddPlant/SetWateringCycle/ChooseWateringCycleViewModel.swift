@@ -12,7 +12,8 @@ class ChooseWateringCycleViewModel: NSObject {
     let coordinator: AddPlantCoordinator
     let viewModel: AddPlantInfoViewModel
     
-    let title = "Choose watering cycle for your plant"
+    let title = "Watering cycle"
+    let subtitle = "Let us know how often you would like to receive watering reminders"
     
     init(coordinator: AddPlantCoordinator, viewModel: AddPlantInfoViewModel) {
         self.coordinator = coordinator

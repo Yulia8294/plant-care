@@ -20,7 +20,7 @@ class AddPlantInfoViewModel: NSObject {
     let coordinator: AddPlantCoordinator
     var currentStep: AddPlantStep = .room
     
-    let placeholderImage = R.image._PlantImage()!
+    let placeholderImage = R.image.plantPlaceholder()!
     
     @Published var room: Room?
     @Published var capturedImage: UIImage? {
@@ -55,7 +55,7 @@ class AddPlantInfoViewModel: NSObject {
     }
     
     func createPlant() {
-        let image = ImageData(withImage: capturedImage ?? R.image._PlantImage()!)
+        let image = ImageData(withImage: capturedImage ?? placeholderImage)
         let plant = Plant(title: name, photo: image, age: 1, dateAquired: Date(), lastWatering: Date(), wateringCycle: wateringCycle, room: room?.title ?? "")
         AppData.myPlants.append(plant)
     }

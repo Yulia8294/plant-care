@@ -15,7 +15,7 @@ class AddPlantPictureController: UIViewController {
     
     var viewModel: AddPlantInfoViewModel!
     
-    private let placeholderImage = R.image._PlantImage()!
+    private let placeholderImage = R.image.plantPlaceholder()!
     private let mediaPicker = MediaPicker()
     
     private var bindings = Set<AnyCancellable>()

@@ -16,9 +16,17 @@ class SetWateringCycleController: UIViewController {
         
     private var bindings = Set<AnyCancellable>()
     
+    lazy var backgroundImageView: UIImageView = {
+        let view = UIImageView(image: R.image.watercolor1()!)
+        view.contentMode = .scaleAspectFill
+        view.alpha = 0.3
+       return view
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.registerCell(WateringCell.self)
+        tableView.backgroundView = backgroundImageView
         bindViewModel()
     }
     
