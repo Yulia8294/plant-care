@@ -25,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.tintColor = .primaryText
         window?.rootViewController = tabBarController
         window?.makeKeyAndVisible()
+        AppData.loadFromCache()
         
         return true
     }

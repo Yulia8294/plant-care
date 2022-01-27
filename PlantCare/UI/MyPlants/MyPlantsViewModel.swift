@@ -41,7 +41,7 @@ class MyPlantsViewModel: NSObject {
     }
     
     func getPlants() {
-        plants = AppData.myPlants
+        plants = InDefaultsStorage.myPlants
         plantsCellViewModels = groupedPlants.map { $0.map { createCellModel(plant: $0) } }
     }
     
@@ -54,7 +54,7 @@ class MyPlantsViewModel: NSObject {
     }
     
     private func createCellModel(plant: Plant) -> PlantCellViewModel {
-        PlantCellViewModel(image: plant.photo, title: plant.title)
+        PlantCellViewModel(image: plant.photo.getImage() ?? R.image._PlantImage()!, title: plant.title)
     }
     
     func getCellViewModel(at indexPath: IndexPath) -> PlantCellViewModel {
