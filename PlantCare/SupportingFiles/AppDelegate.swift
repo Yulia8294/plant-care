@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         tabBarController = MainTabBarController()
         window = UIWindow(frame: UIScreen.main.bounds)
+        window?.tintColor = .primaryText
         window?.rootViewController = tabBarController
         window?.makeKeyAndVisible()
         

@@ -55,6 +55,6 @@ extension SetWateringCycleController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        150
+        130
     }
 }

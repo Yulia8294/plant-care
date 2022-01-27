@@ -9,14 +9,35 @@ import UIKit
 
 extension UIColor {
     
-    static let accent = #colorLiteral(red: 0.3803921569, green: 0.6862745098, blue: 0.168627451, alpha: 1)
-    static let secondaryText = #colorLiteral(red: 0.5490196078, green: 0.5490196078, blue: 0.5490196078, alpha: 1)
+    static var accent = R.color.accent()!
+    static var primaryText = R.color.primaryText()!
+    static var secondaryText = R.color.secondaryText()!
 }
 
 struct AppAppearance {
     
     static func setup() {
         setupTabBarAppearance()
+        setupNavBarAppearance()
+    }
+    
+    private static func setupNavBarAppearance() {
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = .white
+        appearance.shadowColor = .clear
+        
+        appearance.setBackIndicatorImage(R.image.back()!.withTintColor(.primaryText), transitionMaskImage: R.image.back()!.withTintColor(.primaryText))
+        //appearance.backgroundImage = UIImage.init(color: .white)
+        appearance.titleTextAttributes = [.foregroundColor: UIColor.primaryText,
+                                          .font: UIFont.systemFont(ofSize: 15, weight: .semibold)]
+        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.accent,
+                                               .font: UIFont.systemFont(ofSize: 25, weight: .semibold),
+                                               .kern: 0.41]
+
+        UINavigationBar.appearance().standardAppearance = appearance
+        UINavigationBar.appearance().scrollEdgeAppearance = appearance
+        
     }
         
     private static func setupTabBarAppearance() {
@@ -26,7 +47,7 @@ struct AppAppearance {
       //  appearance.shadowImage = R.image.shadow()!
         appearance.backgroundColor = .white
 
-        tabBar.tintColor = .accent
-        tabBar.unselectedItemTintColor = .secondaryText
+        tabBar.tintColor = R.color.accent()
+        tabBar.unselectedItemTintColor = R.color.backgroundDarker()
     }
 }

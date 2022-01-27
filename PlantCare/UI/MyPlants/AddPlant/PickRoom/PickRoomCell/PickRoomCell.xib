@@ -2,7 +2,9 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,7 +19,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="center" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="AWE-Dt-rRU">
-                        <rect key="frame" x="0.0" y="0.0" width="451" height="510"/>
+                        <rect key="frame" x="0.0" y="0.0" width="451" height="495"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kitchen" translatesAutoresizingMaskIntoConstraints="NO" id="7Bb-pg-xxN">
                                 <rect key="frame" x="0.0" y="0.0" width="451" height="451"/>
@@ -26,9 +28,9 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T8E-Iq-xaG">
-                                <rect key="frame" x="0.0" y="451" width="451" height="59"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="0.0" y="451" width="451" height="44"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                <color key="textColor" name="DarkSecondAccent"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -39,7 +41,7 @@
                     <constraint firstItem="AWE-Dt-rRU" firstAttribute="leading" secondItem="aWC-ha-IZ9" secondAttribute="leading" id="NlV-sL-XbV"/>
                     <constraint firstItem="AWE-Dt-rRU" firstAttribute="top" secondItem="aWC-ha-IZ9" secondAttribute="top" id="fEH-VV-CtB"/>
                     <constraint firstAttribute="trailing" secondItem="AWE-Dt-rRU" secondAttribute="trailing" id="fKV-Bk-keP"/>
-                    <constraint firstAttribute="bottom" secondItem="AWE-Dt-rRU" secondAttribute="bottom" id="wbp-fV-UlA"/>
+                    <constraint firstAttribute="bottom" secondItem="AWE-Dt-rRU" secondAttribute="bottom" constant="15" id="wbp-fV-UlA"/>
                 </constraints>
             </collectionViewCellContentView>
             <size key="customSize" width="451" height="510"/>
@@ -52,5 +54,8 @@
     </objects>
     <resources>
         <image name="kitchen" width="1807" height="1206"/>
+        <namedColor name="DarkSecondAccent">
+            <color red="0.30980392156862746" green="0.28235294117647058" blue="0.38039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

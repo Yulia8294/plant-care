@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct Plant {
+struct Plant: Codable {
     
     var title: String
     var photo: UIImage

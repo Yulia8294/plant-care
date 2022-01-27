@@ -40,7 +40,7 @@
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Du6-u9-ZM6"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="wIL-Ch-KbE" firstAttribute="top" secondItem="Du6-u9-ZM6" secondAttribute="top" id="2IJ-EX-Q3A"/>
                             <constraint firstItem="wIL-Ch-KbE" firstAttribute="leading" secondItem="Du6-u9-ZM6" secondAttribute="leading" id="Wp4-DS-RyM"/>
@@ -50,6 +50,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="My Plants" image="Explore" id="Mxu-Le-dLG"/>
                     <navigationItem key="navigationItem" title="My Plants" id="LEz-6v-ZhN">
+                        <barButtonItem key="backBarButtonItem" title=" " id="bx8-xX-dWj"/>
                         <barButtonItem key="rightBarButtonItem" image="Add" id="ZiC-aH-pR6">
                             <connections>
                                 <action selector="didPressAddPlantButton:" destination="SFv-O8-aYW" id="MDl-xO-l37"/>

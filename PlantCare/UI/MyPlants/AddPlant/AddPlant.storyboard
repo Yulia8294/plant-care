@@ -4,12 +4,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Add Plant Picture Controller-->
+        <!--Add Plant picture-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="AddPlantPictureController" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="AddPlantPictureController" customModule="PlantCare" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="09B-Cd-Nko">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="09B-Cd-Nko">
                                 <rect key="frame" x="107" y="169" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="KVr-uj-PQF"/>
@@ -29,31 +30,31 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="BOe-mK-02f">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="BOe-mK-02f">
                                 <rect key="frame" x="40" y="419" width="334" height="110"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ot-RO-dyQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="334" height="45"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="45" id="d3g-kh-V90"/>
+                                            <constraint firstAttribute="height" constant="50" id="d3g-kh-V90"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Take a picture" cornerStyle="large">
-                                            <color key="baseBackgroundColor" red="0.56751224544498469" green="0.68627450980000004" blue="0.16862745100000001" alpha="0.9164708473427402" colorSpace="calibratedRGB"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Use your picture" cornerStyle="capsule">
+                                            <color key="baseBackgroundColor" name="LightAccent"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="didPressTakePicutreButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="WOA-0V-N1P"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MzD-cl-hOG">
-                                        <rect key="frame" x="0.0" y="65" width="334" height="45"/>
+                                        <rect key="frame" x="0.0" y="60" width="334" height="50"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="45" id="NcR-Nd-GEe"/>
+                                            <constraint firstAttribute="height" constant="50" id="NcR-Nd-GEe"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="tinted" title="Use default" cornerStyle="large">
-                                            <color key="baseForegroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <color key="baseBackgroundColor" red="0.3803921569" green="0.68627450980000004" blue="0.16862745100000001" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Pick default image" cornerStyle="capsule">
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="baseBackgroundColor" name="SecondAccent"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="didPressUseDefaultButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="hWm-cp-okD"/>
@@ -62,13 +63,14 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DhL-Ok-bbH">
-                                <rect key="frame" x="40" y="787" width="334" height="45"/>
+                                <rect key="frame" x="40" y="782" width="334" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="33L-y2-1d3"/>
+                                    <constraint firstAttribute="height" constant="50" id="33L-y2-1d3"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="NEXT" cornerStyle="large">
-                                    <color key="baseBackgroundColor" red="0.3803921569" green="0.68627450980000004" blue="0.16862745100000001" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                <buttonConfiguration key="configuration" style="filled" title="NEXT" cornerStyle="capsule">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" name="Accent"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="didPressNextStep:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="QEJ-JF-qpP"/>
@@ -90,6 +92,9 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="BOe-mK-02f" secondAttribute="trailing" constant="40" id="xZN-k0-ipL"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Add Plant picture" id="O46-dI-8P0">
+                        <barButtonItem key="backBarButtonItem" title=" " id="86p-Hm-Ofh"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="plantImage" destination="09B-Cd-Nko" id="CZR-ku-R1d"/>
                     </connections>
@@ -142,7 +147,7 @@
             </objects>
             <point key="canvasLocation" x="-745" y="92"/>
         </scene>
-        <!--Choose Plant Title Controller-->
+        <!--Choose Plant Name-->
         <scene sceneID="cdn-Hk-FGe">
             <objects>
                 <viewController storyboardIdentifier="ChoosePlantTitleController" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="TOg-gW-kMy" customClass="ChoosePlantTitleController" customModule="PlantCare" customModuleProvider="target" sceneMemberID="viewController">
@@ -150,7 +155,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="Qtv-BN-UEU">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qtv-BN-UEU">
                                 <rect key="frame" x="107" y="169" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="22y-2w-Fwv"/>
@@ -163,26 +168,37 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="iC0-Pj-BCY">
-                                <rect key="frame" x="40" y="419" width="334" height="110"/>
+                                <rect key="frame" x="40" y="419" width="334" height="120"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter plant name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6oQ-R6-RVU">
-                                        <rect key="frame" x="0.0" y="0.0" width="334" height="45"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter plant name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6oQ-R6-RVU">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="45" id="Q0R-Yo-ps7"/>
+                                            <constraint firstAttribute="height" constant="50" id="Q0R-Yo-ps7"/>
                                         </constraints>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" name="DarkSecondAccent"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" name="BackgroundDarker"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gIY-Qa-0b7">
-                                        <rect key="frame" x="0.0" y="65" width="334" height="45"/>
+                                        <rect key="frame" x="0.0" y="70" width="334" height="50"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="45" id="Of8-tC-YrC"/>
+                                            <constraint firstAttribute="height" constant="50" id="Of8-tC-YrC"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="tinted" title="Generate Random Name" cornerStyle="large">
-                                            <color key="baseForegroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <color key="baseBackgroundColor" red="0.3803921569" green="0.68627450980000004" blue="0.16862745100000001" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Random Name" cornerStyle="capsule">
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="baseBackgroundColor" name="SecondAccent"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="didPressGeneratePlantNameButton:" destination="TOg-gW-kMy" eventType="touchUpInside" id="lz9-oe-cbj"/>
@@ -191,13 +207,14 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wcn-gd-6qa">
-                                <rect key="frame" x="40" y="787" width="334" height="45"/>
+                                <rect key="frame" x="40" y="782" width="334" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="gFz-RB-RgK"/>
+                                    <constraint firstAttribute="height" constant="50" id="gFz-RB-RgK"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="NEXT" cornerStyle="large">
-                                    <color key="baseBackgroundColor" red="0.3803921569" green="0.68627450980000004" blue="0.16862745100000001" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                <buttonConfiguration key="configuration" style="filled" title="NEXT" cornerStyle="capsule">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" name="Accent"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="didPressNextButton:" destination="TOg-gW-kMy" eventType="touchUpInside" id="ezx-dC-Uok"/>
@@ -219,6 +236,9 @@
                             <constraint firstItem="Wcn-gd-6qa" firstAttribute="centerX" secondItem="Fiv-GH-pP0" secondAttribute="centerX" id="xmC-24-gEx"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Choose Plant Name" id="81E-ba-55p">
+                        <barButtonItem key="backBarButtonItem" title=" " id="vAv-Dl-UoT"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="plantImageView" destination="Qtv-BN-UEU" id="acW-lq-Wu8"/>
                         <outlet property="plantNameTextField" destination="6oQ-R6-RVU" id="f27-T7-piR"/>
@@ -228,7 +248,7 @@
             </objects>
             <point key="canvasLocation" x="845" y="78"/>
         </scene>
-        <!--Set Watering Cycle Controller-->
+        <!--Add watering cycle-->
         <scene sceneID="Znj-Aa-mkp">
             <objects>
                 <viewController storyboardIdentifier="SetWateringCycleController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vIl-qA-FXy" customClass="SetWateringCycleController" customModule="PlantCare" customModuleProvider="target" sceneMemberID="viewController">
@@ -254,6 +274,9 @@
                             <constraint firstItem="cfU-cg-GH2" firstAttribute="bottom" secondItem="rPH-mo-xEK" secondAttribute="bottom" id="dkA-18-STZ"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Add watering cycle" id="9ks-M6-Ksa">
+                        <barButtonItem key="backBarButtonItem" title=" " id="t8l-4N-t03"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="rPH-mo-xEK" id="6zq-6R-nPw"/>
                     </connections>
@@ -264,7 +287,21 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Image" width="414" height="309"/>
+        <namedColor name="Accent">
+            <color red="0.098039215686274508" green="0.2627450980392157" blue="0.1764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BackgroundDarker">
+            <color red="0.72156862745098038" green="0.73333333333333328" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="DarkSecondAccent">
+            <color red="0.30980392156862746" green="0.28235294117647058" blue="0.38039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LightAccent">
+            <color red="0.30588235294117649" green="0.4392156862745098" blue="0.396078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SecondAccent">
+            <color red="0.63529411764705879" green="0.55686274509803924" blue="0.68235294117647061" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

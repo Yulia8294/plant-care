@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum WateringCycle: CaseIterable {
+enum WateringCycle: CaseIterable, Codable {
     case weekly
     case daily
     case biweekly

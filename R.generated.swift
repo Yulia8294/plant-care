@@ -141,10 +141,37 @@ struct R: Rswift.Validatable {
   }
   #endif
 
-  /// This `R.color` struct is generated, and contains static references to 1 colors.
+  /// This `R.color` struct is generated, and contains static references to 10 colors.
   struct color {
     /// Color `AccentColor`.
     static let accentColor = Rswift.ColorResource(bundle: R.hostingBundle, name: "AccentColor")
+    /// Color `Accent`.
+    static let accent = Rswift.ColorResource(bundle: R.hostingBundle, name: "Accent")
+    /// Color `BackgroundDarker`.
+    static let backgroundDarker = Rswift.ColorResource(bundle: R.hostingBundle, name: "BackgroundDarker")
+    /// Color `Background`.
+    static let background = Rswift.ColorResource(bundle: R.hostingBundle, name: "Background")
+    /// Color `DarkSecondAccent`.
+    static let darkSecondAccent = Rswift.ColorResource(bundle: R.hostingBundle, name: "DarkSecondAccent")
+    /// Color `LightAccent`.
+    static let lightAccent = Rswift.ColorResource(bundle: R.hostingBundle, name: "LightAccent")
+    /// Color `PrimaryText`.
+    static let primaryText = Rswift.ColorResource(bundle: R.hostingBundle, name: "PrimaryText")
+    /// Color `SecondAccentBackground`.
+    static let secondAccentBackground = Rswift.ColorResource(bundle: R.hostingBundle, name: "SecondAccentBackground")
+    /// Color `SecondAccent`.
+    static let secondAccent = Rswift.ColorResource(bundle: R.hostingBundle, name: "SecondAccent")
+    /// Color `SecondaryText`.
+    static let secondaryText = Rswift.ColorResource(bundle: R.hostingBundle, name: "SecondaryText")
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "Accent", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func accent(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.accent, compatibleWith: traitCollection)
+    }
+    #endif
 
     #if os(iOS) || os(tvOS)
     /// `UIColor(named: "AccentColor", bundle: ..., traitCollection: ...)`
@@ -152,6 +179,86 @@ struct R: Rswift.Validatable {
     @available(iOS 11.0, *)
     static func accentColor(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
       return UIKit.UIColor(resource: R.color.accentColor, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "Background", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func background(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.background, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "BackgroundDarker", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func backgroundDarker(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.backgroundDarker, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "DarkSecondAccent", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func darkSecondAccent(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.darkSecondAccent, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "LightAccent", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func lightAccent(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.lightAccent, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "PrimaryText", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func primaryText(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.primaryText, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "SecondAccent", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func secondAccent(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.secondAccent, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "SecondAccentBackground", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func secondAccentBackground(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.secondAccentBackground, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "SecondaryText", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func secondaryText(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.secondaryText, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(watchOS)
+    /// `UIColor(named: "Accent", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func accent(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.accent.name)
     }
     #endif
 
@@ -163,10 +270,74 @@ struct R: Rswift.Validatable {
     }
     #endif
 
+    #if os(watchOS)
+    /// `UIColor(named: "Background", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func background(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.background.name)
+    }
+    #endif
+
+    #if os(watchOS)
+    /// `UIColor(named: "BackgroundDarker", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func backgroundDarker(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.backgroundDarker.name)
+    }
+    #endif
+
+    #if os(watchOS)
+    /// `UIColor(named: "DarkSecondAccent", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func darkSecondAccent(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.darkSecondAccent.name)
+    }
+    #endif
+
+    #if os(watchOS)
+    /// `UIColor(named: "LightAccent", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func lightAccent(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.lightAccent.name)
+    }
+    #endif
+
+    #if os(watchOS)
+    /// `UIColor(named: "PrimaryText", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func primaryText(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.primaryText.name)
+    }
+    #endif
+
+    #if os(watchOS)
+    /// `UIColor(named: "SecondAccent", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func secondAccent(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.secondAccent.name)
+    }
+    #endif
+
+    #if os(watchOS)
+    /// `UIColor(named: "SecondAccentBackground", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func secondAccentBackground(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.secondAccentBackground.name)
+    }
+    #endif
+
+    #if os(watchOS)
+    /// `UIColor(named: "SecondaryText", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func secondaryText(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.secondaryText.name)
+    }
+    #endif
+
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 14 images.
+  /// This `R.image` struct is generated, and contains static references to 15 images.
   struct image {
     /// Image `Add`.
     static let add = Rswift.ImageResource(bundle: R.hostingBundle, name: "Add")
@@ -182,6 +353,8 @@ struct R: Rswift.Validatable {
     static let profile = Rswift.ImageResource(bundle: R.hostingBundle, name: "Profile")
     /// Image `_Plant image`.
     static let _PlantImage = Rswift.ImageResource(bundle: R.hostingBundle, name: "_Plant image")
+    /// Image `back`.
+    static let back = Rswift.ImageResource(bundle: R.hostingBundle, name: "back")
     /// Image `bathroom`.
     static let bathroom = Rswift.ImageResource(bundle: R.hostingBundle, name: "bathroom")
     /// Image `bedroom`.
@@ -243,6 +416,13 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "_Plant image", bundle: ..., traitCollection: ...)`
     static func _PlantImage(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image._PlantImage, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "back", bundle: ..., traitCollection: ...)`
+    static func back(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.back, compatibleWith: traitCollection)
     }
     #endif
 
@@ -427,6 +607,7 @@ struct _R: Rswift.Validatable {
       static func validate() throws {
         if UIKit.UIImage(named: "kitchen", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'kitchen' is used in nib 'PickRoomCell', but couldn't be loaded.") }
         if #available(iOS 11.0, tvOS 11.0, *) {
+          if UIKit.UIColor(named: "DarkSecondAccent", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'DarkSecondAccent' is used in nib 'PickRoomCell', but couldn't be loaded.") }
         }
       }
 
@@ -530,8 +711,12 @@ struct _R: Rswift.Validatable {
       }
 
       static func validate() throws {
-        if UIKit.UIImage(named: "Image", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'Image' is used in storyboard 'AddPlant', but couldn't be loaded.") }
         if #available(iOS 11.0, tvOS 11.0, *) {
+          if UIKit.UIColor(named: "Accent", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'Accent' is used in storyboard 'AddPlant', but couldn't be loaded.") }
+          if UIKit.UIColor(named: "BackgroundDarker", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'BackgroundDarker' is used in storyboard 'AddPlant', but couldn't be loaded.") }
+          if UIKit.UIColor(named: "DarkSecondAccent", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'DarkSecondAccent' is used in storyboard 'AddPlant', but couldn't be loaded.") }
+          if UIKit.UIColor(named: "LightAccent", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'LightAccent' is used in storyboard 'AddPlant', but couldn't be loaded.") }
+          if UIKit.UIColor(named: "SecondAccent", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'SecondAccent' is used in storyboard 'AddPlant', but couldn't be loaded.") }
         }
         if _R.storyboard.addPlant().addPlantPictureController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'addPlantPictureController' could not be loaded from storyboard 'AddPlant' as 'AddPlantPictureController'.") }
         if _R.storyboard.addPlant().choosePlantTitleController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'choosePlantTitleController' could not be loaded from storyboard 'AddPlant' as 'ChoosePlantTitleController'.") }
