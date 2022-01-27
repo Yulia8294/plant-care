@@ -56,7 +56,7 @@ class AddPlantInfoViewModel: NSObject {
     
     func createPlant() {
         let image = ImageData(withImage: capturedImage ?? placeholderImage)
-        let plant = Plant(title: name, photo: image, age: 1, dateAquired: Date(), lastWatering: Date(), wateringCycle: wateringCycle, room: room?.title ?? "")
+        let plant = Plant(id: UUID().uuidString, title: name, photo: image, age: 1, dateAquired: Date(), lastWatering: Date(), wateringCycle: wateringCycle, room: room?.title ?? "")
         AppData.myPlants.append(plant)
     }
     

@@ -7,8 +7,9 @@
 
 import UIKit
 
-struct Plant: Codable {
+struct Plant: Codable, Identifiable {
     
+    var id: String
     var title: String
     var photo: ImageData
     var age: Int

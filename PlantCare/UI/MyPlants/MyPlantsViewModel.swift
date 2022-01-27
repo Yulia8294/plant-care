@@ -22,7 +22,9 @@ class MyPlantsViewModel: NSObject {
     
     private var plants = [Plant]() {
         didSet {
+            AppData.myPlants = plants
             groupPlantsByRoom()
+            generateCellViewModels()
         }
     }
     
@@ -42,19 +44,15 @@ class MyPlantsViewModel: NSObject {
     
     func getPlants() {
         plants = InDefaultsStorage.myPlants
-        plantsCellViewModels = groupedPlants.map { $0.map { createCellModel(plant: $0) } }
+        reload?()
     }
     
-    private func groupPlantsByRoom() {
-        groupedPlants = Dictionary(grouping: plants, by: { plant in
-            plant.room
-        }).map {
-            $0.value
+    func deleteItem(at indexPath: IndexPath) {
+        let item = groupedPlants[indexPath.section][indexPath.row]
+        if let index = plants.firstIndex(where: { $0.id == item.id }) {
+            plants.remove(at: index)
         }
-    }
-    
-    private func createCellModel(plant: Plant) -> PlantCellViewModel {
-        PlantCellViewModel(image: plant.photo.getImage() ?? R.image.plantPlaceholder()!, title: plant.title)
+        reload?()
     }
     
     func getCellViewModel(at indexPath: IndexPath) -> PlantCellViewModel {
@@ -67,5 +65,24 @@ class MyPlantsViewModel: NSObject {
     
     func didPressAddNewPlant() {
         coordinator.addPlant()
+    }
+    
+    
+    //MARK: - Private
+    
+    private func generateCellViewModels() {
+        plantsCellViewModels = groupedPlants.map { $0.map { createCellModel(plant: $0) } }
+    }
+    
+    private func groupPlantsByRoom() {
+        groupedPlants = Dictionary(grouping: plants, by: { plant in
+            plant.room
+        })
+            .sorted(by: { $0.key < $1.key })
+            .map { $0.value }
+    }
+    
+    private func createCellModel(plant: Plant) -> PlantCellViewModel {
+        PlantCellViewModel(image: plant.photo.getImage() ?? R.image.plantPlaceholder()!, title: plant.title)
     }
 }

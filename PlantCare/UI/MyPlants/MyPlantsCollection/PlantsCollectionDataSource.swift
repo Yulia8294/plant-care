@@ -39,6 +39,30 @@ class PlantsCollectionDataSource: NSObject, UICollectionViewDelegate, UICollecti
         collectionView.header(HeaderView.self, for: indexPath).setup(viewModel.getSectionHeaderTitle(for: indexPath.section))
     }
     
+    //MARK: - Context menu
+    
+    func collectionView(_ collectionView: UICollectionView, contextMenuConfigurationForItemAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
+        configureContextMenu(at: indexPath)
+    }
+    
+    private func configureContextMenu(at indexPath: IndexPath) -> UIContextMenuConfiguration{
+        
+        let context = UIContextMenuConfiguration(identifier: nil, previewProvider: nil) { (action) -> UIMenu? in
+            
+            let delete = UIAction(title: "Delete", image: UIImage(systemName: "trash"), identifier: nil, discoverabilityTitle: nil, attributes: .destructive, state: .off) { (_) in
+                self.viewModel.deleteItem(at: indexPath)
+            }
+            
+            return UIMenu(title: "", image: nil, identifier: nil, options: UIMenu.Options.displayInline, children: [delete])
+            
+        }
+        return context
+    }
+    
+    
+    
+    //MARK: - CollectionViewLayout
+    
     private func generateLayout() -> UICollectionViewLayout {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5),
                                               heightDimension: .fractionalHeight(1.0))
@@ -46,7 +70,7 @@ class PlantsCollectionDataSource: NSObject, UICollectionViewDelegate, UICollecti
         
         
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                               heightDimension: .absolute(220))
+                                               heightDimension: .absolute(190))
 
         let plantGroup = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize,
                                                            subitem: plantItem, count: 2)
@@ -59,7 +83,7 @@ class PlantsCollectionDataSource: NSObject, UICollectionViewDelegate, UICollecti
         
         let headerFooterSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1.0),
-            heightDimension: .absolute(35)
+            heightDimension: .absolute(25)
         )
         
         let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
