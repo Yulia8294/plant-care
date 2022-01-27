@@ -298,8 +298,10 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.nib` struct is generated, and contains static references to 4 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 5 nibs.
   struct nib {
+    /// Nib `HeaderView`.
+    static let headerView = _R.nib._HeaderView()
     /// Nib `PickRoomCell`.
     static let pickRoomCell = _R.nib._PickRoomCell()
     /// Nib `PlantCell`.
@@ -308,6 +310,14 @@ struct R: Rswift.Validatable {
     static let plantInfoView = _R.nib._PlantInfoView()
     /// Nib `WateringCell`.
     static let wateringCell = _R.nib._WateringCell()
+
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "HeaderView", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.headerView) instead")
+    static func headerView(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.headerView)
+    }
+    #endif
 
     #if os(iOS) || os(tvOS)
     /// `UINib(name: "PickRoomCell", in: bundle)`
@@ -340,6 +350,10 @@ struct R: Rswift.Validatable {
       return UIKit.UINib(resource: R.nib.wateringCell)
     }
     #endif
+
+    static func headerView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> HeaderView? {
+      return R.nib.headerView.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? HeaderView
+    }
 
     static func pickRoomCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> PickRoomCell? {
       return R.nib.pickRoomCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? PickRoomCell
@@ -389,6 +403,17 @@ struct _R: Rswift.Validatable {
       try _PickRoomCell.validate()
       try _PlantCell.validate()
       try _PlantInfoView.validate()
+    }
+
+    struct _HeaderView: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "HeaderView"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> HeaderView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? HeaderView
+      }
+
+      fileprivate init() {}
     }
 
     struct _PickRoomCell: Rswift.NibResourceType, Rswift.Validatable {

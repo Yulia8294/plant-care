@@ -16,13 +16,18 @@ class PlantsCollectionDataSource: NSObject, UICollectionViewDelegate, UICollecti
         collection.delegate = self
         collection.dataSource = self
         collection.registerCell(PlantCell.self)
+        collection.registerHeader(HeaderView.self)
         collection.setCollectionViewLayout(generateLayout(), animated: true)
     }
     
     //MARK: - Collection view delegate & datasource
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         viewModel.plantsCellViewModels.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        viewModel.plantsCellViewModels[section].count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -30,13 +35,9 @@ class PlantsCollectionDataSource: NSObject, UICollectionViewDelegate, UICollecti
             .setup(with: viewModel.getCellViewModel(at: indexPath))
     }
     
-//    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-//        
-////        return collectionView.header(TripletSectionHeader.self, for: indexPath).setup(for: section,
-////                                                                                         canExpand: canExpand(section),
-////                                                                                         state: displayState(for: section),
-////                                                                                         delegate: self)
-//    }
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        collectionView.header(HeaderView.self, for: indexPath).setup(viewModel.getSectionHeaderTitle(for: indexPath.section))
+    }
     
     private func generateLayout() -> UICollectionViewLayout {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5),

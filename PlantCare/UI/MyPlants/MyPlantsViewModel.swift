@@ -14,13 +14,23 @@ struct PlantCellViewModel {
 
 class MyPlantsViewModel: NSObject {
     
-    var coordinator: MyPlantsCoordinator!
+    private let coordinator: MyPlantsCoordinator!
     
-    var plants = [Plant]()
+    init(coordinator: MyPlantsCoordinator) {
+        self.coordinator = coordinator
+    }
+    
+    private var plants = [Plant]() {
+        didSet {
+            groupPlantsByRoom()
+        }
+    }
+    
+    private var groupedPlants = [[Plant]]()
     
     var reload: (() -> Void)?
     
-    var plantsCellViewModels = [PlantCellViewModel]() {
+    var plantsCellViewModels = [[PlantCellViewModel]]() {
         didSet {
             reload?()
         }
@@ -32,7 +42,15 @@ class MyPlantsViewModel: NSObject {
     
     func getPlants() {
         plants = AppData.myPlants
-        plantsCellViewModels = plants.map { createCellModel(plant: $0) }
+        plantsCellViewModels = groupedPlants.map { $0.map { createCellModel(plant: $0) } }
+    }
+    
+    private func groupPlantsByRoom() {
+        groupedPlants = Dictionary(grouping: plants, by: { plant in
+            plant.room
+        }).map {
+            $0.value
+        }
     }
     
     private func createCellModel(plant: Plant) -> PlantCellViewModel {
@@ -40,7 +58,11 @@ class MyPlantsViewModel: NSObject {
     }
     
     func getCellViewModel(at indexPath: IndexPath) -> PlantCellViewModel {
-        plantsCellViewModels[indexPath.row]
+        plantsCellViewModels[indexPath.section][indexPath.row]
+    }
+    
+    func getSectionHeaderTitle(for section: Int) -> String {
+        groupedPlants[section].first?.room ?? ""
     }
     
     func didPressAddNewPlant() {

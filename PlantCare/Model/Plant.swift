@@ -14,6 +14,7 @@ struct Plant {
     var age: Int
     var dateAquired: Date
     var lastWatering: Date
-    var wateringCycle: Int
+    var wateringCycle: WateringCycle
+    var room: String
 
 }

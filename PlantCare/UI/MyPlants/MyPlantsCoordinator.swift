@@ -23,9 +23,7 @@ class MyPlantsCoordinator: Coordinator {
     
     func start() {
         let myPlantsController = R.storyboard.myPlants.myPlantsController()!
-        let myPlantsViewModel = MyPlantsViewModel()
-        myPlantsViewModel.coordinator = self
-        myPlantsController.viewModel = myPlantsViewModel
+        myPlantsController.viewModel = MyPlantsViewModel(coordinator: self)
         navigationController.viewControllers = [myPlantsController]
     }
     

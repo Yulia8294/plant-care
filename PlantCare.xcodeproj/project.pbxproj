@@ -30,6 +30,8 @@
 		78101D1627A17AEC00B9A687 /* ChooseWateringCycleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78101D1527A17AEC00B9A687 /* ChooseWateringCycleViewModel.swift */; };
 		78101D1827A17DD600B9A687 /* UITableViewTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78101D1727A17DD600B9A687 /* UITableViewTools.swift */; };
 		787BBF8727A183E800763CB7 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787BBF8627A183E800763CB7 /* Storage.swift */; };
+		787BBF8A27A1AE8500763CB7 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787BBF8927A1AE8500763CB7 /* HeaderView.swift */; };
+		787BBF8C27A1AE9400763CB7 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 787BBF8B27A1AE9400763CB7 /* HeaderView.xib */; };
 		789C319A27A01B6F00177FED /* WateringCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789C319927A01B6F00177FED /* WateringCycle.swift */; };
 		789C319C27A01EE200177FED /* AddPlantCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789C319B27A01EE200177FED /* AddPlantCoordinator.swift */; };
 		789C31A327A03EA000177FED /* ChoosePlantTitleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789C31A227A03EA000177FED /* ChoosePlantTitleController.swift */; };
@@ -87,6 +89,8 @@
 		78101D1527A17AEC00B9A687 /* ChooseWateringCycleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseWateringCycleViewModel.swift; sourceTree = "<group>"; };
 		78101D1727A17DD600B9A687 /* UITableViewTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewTools.swift; sourceTree = "<group>"; };
 		787BBF8627A183E800763CB7 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		787BBF8927A1AE8500763CB7 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		787BBF8B27A1AE9400763CB7 /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 		789C319927A01B6F00177FED /* WateringCycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WateringCycle.swift; sourceTree = "<group>"; };
 		789C319B27A01EE200177FED /* AddPlantCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlantCoordinator.swift; sourceTree = "<group>"; };
 		789C31A227A03EA000177FED /* ChoosePlantTitleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePlantTitleController.swift; sourceTree = "<group>"; };
@@ -178,6 +182,33 @@
 			path = WateringCell;
 			sourceTree = "<group>";
 		};
+		787BBF8827A1AE7D00763CB7 /* HeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				787BBF8927A1AE8500763CB7 /* HeaderView.swift */,
+				787BBF8B27A1AE9400763CB7 /* HeaderView.xib */,
+			);
+			path = HeaderView;
+			sourceTree = "<group>";
+		};
+		787BBF8D27A1B08F00763CB7 /* PickRoomCell */ = {
+			isa = PBXGroup;
+			children = (
+				789D2A2B279957AD00154A9F /* PickRoomCell.swift */,
+				781001C62799647E00D3EE04 /* PickRoomCell.xib */,
+			);
+			path = PickRoomCell;
+			sourceTree = "<group>";
+		};
+		787BBF8E27A1B0A500763CB7 /* PlantCell */ = {
+			isa = PBXGroup;
+			children = (
+				78B7A615278A114200CA1CAB /* PlantCell.swift */,
+				78B7A616278A114200CA1CAB /* PlantCell.xib */,
+			);
+			path = PlantCell;
+			sourceTree = "<group>";
+		};
 		789C319E27A03AA400177FED /* Choose Title */ = {
 			isa = PBXGroup;
 			children = (
@@ -199,10 +230,9 @@
 		789D2A2A2799579000154A9F /* PickRoom */ = {
 			isa = PBXGroup;
 			children = (
+				787BBF8D27A1B08F00763CB7 /* PickRoomCell */,
 				789D2A3127995D6100154A9F /* ViewModel */,
 				789D2A282799577800154A9F /* PickRoomController.swift */,
-				789D2A2B279957AD00154A9F /* PickRoomCell.swift */,
-				781001C62799647E00D3EE04 /* PickRoomCell.xib */,
 			);
 			path = PickRoom;
 			sourceTree = "<group>";
@@ -290,9 +320,8 @@
 		78B7A614278A111900CA1CAB /* MyPlantsCollection */ = {
 			isa = PBXGroup;
 			children = (
-				78B7A615278A114200CA1CAB /* PlantCell.swift */,
-				78B7A616278A114200CA1CAB /* PlantCell.xib */,
-				78B7A619278A11F000CA1CAB /* GradientView.swift */,
+				787BBF8E27A1B0A500763CB7 /* PlantCell */,
+				787BBF8827A1AE7D00763CB7 /* HeaderView */,
 				78B7A61B278A129300CA1CAB /* PlantsCollectionDataSource.swift */,
 			);
 			path = MyPlantsCollection;
@@ -302,6 +331,7 @@
 			isa = PBXGroup;
 			children = (
 				78B7A61E278A12F400CA1CAB /* UICollectionViewTools.swift */,
+				78B7A619278A11F000CA1CAB /* GradientView.swift */,
 				781001E427998A5E00D3EE04 /* UIView+Storyboard.swift */,
 				781001C8279966D700D3EE04 /* UIView+Animation.swift */,
 				781001E627998D6400D3EE04 /* MediaPicker.swift */,
@@ -418,6 +448,7 @@
 				78101D1027A171E800B9A687 /* WateringCell.xib in Resources */,
 				781001D7279975B000D3EE04 /* MyTasks.storyboard in Resources */,
 				78B7A618278A114200CA1CAB /* PlantCell.xib in Resources */,
+				787BBF8C27A1AE9400763CB7 /* HeaderView.xib in Resources */,
 				78B7A604278A035F00CA1CAB /* LaunchScreen.storyboard in Resources */,
 				78B7A627278A1EE900CA1CAB /* AddPlant.storyboard in Resources */,
 				78B7A601278A035F00CA1CAB /* Assets.xcassets in Resources */,
@@ -510,6 +541,7 @@
 				78B7A617278A114200CA1CAB /* PlantCell.swift in Sources */,
 				78101D1227A1726F00B9A687 /* ShadowView.swift in Sources */,
 				78101D0B27A1716A00B9A687 /* SetWateringCycleController.swift in Sources */,
+				787BBF8A27A1AE8500763CB7 /* HeaderView.swift in Sources */,
 				781001E02799836800D3EE04 /* AddPlantPictureController.swift in Sources */,
 				78B7A61A278A11F000CA1CAB /* GradientView.swift in Sources */,
 				781001D02799725F00D3EE04 /* MyPlantsCoordinator.swift in Sources */,
