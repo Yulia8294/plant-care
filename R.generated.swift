@@ -337,7 +337,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 18 images.
+  /// This `R.image` struct is generated, and contains static references to 19 images.
   struct image {
     /// Image `Add`.
     static let add = Rswift.ImageResource(bundle: R.hostingBundle, name: "Add")
@@ -357,6 +357,8 @@ struct R: Rswift.Validatable {
     static let bathroom = Rswift.ImageResource(bundle: R.hostingBundle, name: "bathroom")
     /// Image `bedroom`.
     static let bedroom = Rswift.ImageResource(bundle: R.hostingBundle, name: "bedroom")
+    /// Image `drop`.
+    static let drop = Rswift.ImageResource(bundle: R.hostingBundle, name: "drop")
     /// Image `emptyState`.
     static let emptyState = Rswift.ImageResource(bundle: R.hostingBundle, name: "emptyState")
     /// Image `kitchen`.
@@ -436,6 +438,13 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "bedroom", bundle: ..., traitCollection: ...)`
     static func bedroom(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.bedroom, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "drop", bundle: ..., traitCollection: ...)`
+    static func drop(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.drop, compatibleWith: traitCollection)
     }
     #endif
 
@@ -667,8 +676,12 @@ struct _R: Rswift.Validatable {
       }
 
       static func validate() throws {
-        if UIKit.UIImage(named: "Image", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'Image' is used in nib 'PlantInfoView', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "plantPlaceholder", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'plantPlaceholder' is used in nib 'PlantInfoView', but couldn't be loaded.") }
         if #available(iOS 11.0, tvOS 11.0, *) {
+          if UIKit.UIColor(named: "Accent", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'Accent' is used in nib 'PlantInfoView', but couldn't be loaded.") }
+          if UIKit.UIColor(named: "DarkSecondAccent", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'DarkSecondAccent' is used in nib 'PlantInfoView', but couldn't be loaded.") }
+          if UIKit.UIColor(named: "PrimaryText", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'PrimaryText' is used in nib 'PlantInfoView', but couldn't be loaded.") }
+          if UIKit.UIColor(named: "SecondaryText", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'SecondaryText' is used in nib 'PlantInfoView', but couldn't be loaded.") }
         }
       }
 
@@ -794,9 +807,14 @@ struct _R: Rswift.Validatable {
       let bundle = R.hostingBundle
       let myPlantsController = StoryboardViewControllerResource<MyPlantsController>(identifier: "MyPlantsController")
       let name = "MyPlants"
+      let plantInfoController = StoryboardViewControllerResource<PlantInfoController>(identifier: "PlantInfoController")
 
       func myPlantsController(_: Void = ()) -> MyPlantsController? {
         return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: myPlantsController)
+      }
+
+      func plantInfoController(_: Void = ()) -> PlantInfoController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: plantInfoController)
       }
 
       static func validate() throws {
@@ -805,6 +823,7 @@ struct _R: Rswift.Validatable {
         if #available(iOS 11.0, tvOS 11.0, *) {
         }
         if _R.storyboard.myPlants().myPlantsController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'myPlantsController' could not be loaded from storyboard 'MyPlants' as 'MyPlantsController'.") }
+        if _R.storyboard.myPlants().plantInfoController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'plantInfoController' could not be loaded from storyboard 'MyPlants' as 'PlantInfoController'.") }
       }
 
       fileprivate init() {}

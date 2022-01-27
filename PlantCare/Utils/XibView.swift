@@ -1,0 +1,52 @@
+//
+//  XibView.swift
+//  PlantCare
+//
+//  Created by Yulia Novikova on 1/27/22.
+//
+
+import UIKit
+
+fileprivate func viewWithSize<T: XibView>(_ size: CGSize) -> T{
+    return T(frame: CGRect(x: 0, y: 0, width: size.width, height: size.height))
+}
+
+open class XibView : UIView {
+    
+    open class var defaultSize: CGSize { return CGSize(width: 100, height: 100) }
+    
+    public class func fromNib() -> Self { return viewWithSize(defaultSize) }
+    
+    private static var identifier: String { return String(describing: self) }
+    var identifier: String { return type(of: self).identifier }
+    
+    //MARK: - Initialization
+    
+    public required override init(frame: CGRect) {
+        
+        super.init(frame: frame)
+        addSubview(loadFromXib())
+        setup()
+    }
+    
+    public required init?(coder aDecoder: NSCoder) {
+        
+        super.init(coder: aDecoder)
+        addSubview(loadFromXib())
+        setup()
+    }
+    
+    private func loadFromXib() -> UIView {
+        
+        let bundle = Bundle(for: type(of: self))
+        let nib = UINib(nibName: identifier, bundle: bundle)
+        let view = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
+        view.frame = self.bounds
+        view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        return view
+    }
+    
+    open func setup() {
+        
+    }
+}

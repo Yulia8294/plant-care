@@ -39,6 +39,10 @@ class PlantsCollectionDataSource: NSObject, UICollectionViewDelegate, UICollecti
         collectionView.header(HeaderView.self, for: indexPath).setup(viewModel.getSectionHeaderTitle(for: indexPath.section))
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        viewModel.didSelectCell(at: indexPath)
+    }
+    
     //MARK: - Context menu
     
     func collectionView(_ collectionView: UICollectionView, contextMenuConfigurationForItemAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {

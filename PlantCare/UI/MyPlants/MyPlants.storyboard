@@ -66,6 +66,33 @@
             </objects>
             <point key="canvasLocation" x="1289.8550724637682" y="-3.3482142857142856"/>
         </scene>
+        <!--Plant Info Controller-->
+        <scene sceneID="NKm-ZW-n8x">
+            <objects>
+                <viewController storyboardIdentifier="PlantInfoController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gZX-50-xIz" customClass="PlantInfoController" customModule="PlantCare" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EIp-T9-3pj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sGT-Qf-2t8" customClass="PlantInfoView" customModule="PlantCare" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aGN-ER-xru"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aGN-ER-xru" firstAttribute="bottom" secondItem="sGT-Qf-2t8" secondAttribute="bottom" id="AO2-Ou-OYS"/>
+                            <constraint firstItem="sGT-Qf-2t8" firstAttribute="top" secondItem="EIp-T9-3pj" secondAttribute="top" id="VHJ-Yl-HKM"/>
+                            <constraint firstItem="sGT-Qf-2t8" firstAttribute="trailing" secondItem="aGN-ER-xru" secondAttribute="trailing" id="eGI-lp-ECb"/>
+                            <constraint firstItem="sGT-Qf-2t8" firstAttribute="leading" secondItem="aGN-ER-xru" secondAttribute="leading" id="uoI-Ka-JcY"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3hi-Qu-P7q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2315" y="-8"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Add" width="24" height="24"/>

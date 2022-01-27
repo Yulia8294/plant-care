@@ -39,7 +39,7 @@ class MyPlantsViewModel: NSObject {
     }
     
     func didSelectCell(at indexPath: IndexPath) {
-        
+        coordinator.showPlantDetails(groupedPlants[indexPath.section][indexPath.row])
     }
     
     func getPlants() {
