@@ -141,7 +141,7 @@ struct R: Rswift.Validatable {
   }
   #endif
 
-  /// This `R.color` struct is generated, and contains static references to 10 colors.
+  /// This `R.color` struct is generated, and contains static references to 11 colors.
   struct color {
     /// Color `AccentColor`.
     static let accentColor = Rswift.ColorResource(bundle: R.hostingBundle, name: "AccentColor")
@@ -153,6 +153,8 @@ struct R: Rswift.Validatable {
     static let background = Rswift.ColorResource(bundle: R.hostingBundle, name: "Background")
     /// Color `DarkSecondAccent`.
     static let darkSecondAccent = Rswift.ColorResource(bundle: R.hostingBundle, name: "DarkSecondAccent")
+    /// Color `ImageBack`.
+    static let imageBack = Rswift.ColorResource(bundle: R.hostingBundle, name: "ImageBack")
     /// Color `LightAccent`.
     static let lightAccent = Rswift.ColorResource(bundle: R.hostingBundle, name: "LightAccent")
     /// Color `PrimaryText`.
@@ -206,6 +208,15 @@ struct R: Rswift.Validatable {
     @available(iOS 11.0, *)
     static func darkSecondAccent(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
       return UIKit.UIColor(resource: R.color.darkSecondAccent, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "ImageBack", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func imageBack(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.imageBack, compatibleWith: traitCollection)
     }
     #endif
 
@@ -295,6 +306,14 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(watchOS)
+    /// `UIColor(named: "ImageBack", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func imageBack(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.imageBack.name)
+    }
+    #endif
+
+    #if os(watchOS)
     /// `UIColor(named: "LightAccent", bundle: ..., traitCollection: ...)`
     @available(watchOSApplicationExtension 4.0, *)
     static func lightAccent(_: Void = ()) -> UIKit.UIColor? {
@@ -337,7 +356,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 19 images.
+  /// This `R.image` struct is generated, and contains static references to 37 images.
   struct image {
     /// Image `Add`.
     static let add = Rswift.ImageResource(bundle: R.hostingBundle, name: "Add")
@@ -357,6 +376,42 @@ struct R: Rswift.Validatable {
     static let bathroom = Rswift.ImageResource(bundle: R.hostingBundle, name: "bathroom")
     /// Image `bedroom`.
     static let bedroom = Rswift.ImageResource(bundle: R.hostingBundle, name: "bedroom")
+    /// Image `default10`.
+    static let default10 = Rswift.ImageResource(bundle: R.hostingBundle, name: "default10")
+    /// Image `default11`.
+    static let default11 = Rswift.ImageResource(bundle: R.hostingBundle, name: "default11")
+    /// Image `default12`.
+    static let default12 = Rswift.ImageResource(bundle: R.hostingBundle, name: "default12")
+    /// Image `default13`.
+    static let default13 = Rswift.ImageResource(bundle: R.hostingBundle, name: "default13")
+    /// Image `default14`.
+    static let default14 = Rswift.ImageResource(bundle: R.hostingBundle, name: "default14")
+    /// Image `default15`.
+    static let default15 = Rswift.ImageResource(bundle: R.hostingBundle, name: "default15")
+    /// Image `default16`.
+    static let default16 = Rswift.ImageResource(bundle: R.hostingBundle, name: "default16")
+    /// Image `default17`.
+    static let default17 = Rswift.ImageResource(bundle: R.hostingBundle, name: "default17")
+    /// Image `default18`.
+    static let default18 = Rswift.ImageResource(bundle: R.hostingBundle, name: "default18")
+    /// Image `default1`.
+    static let default1 = Rswift.ImageResource(bundle: R.hostingBundle, name: "default1")
+    /// Image `default2`.
+    static let default2 = Rswift.ImageResource(bundle: R.hostingBundle, name: "default2")
+    /// Image `default3`.
+    static let default3 = Rswift.ImageResource(bundle: R.hostingBundle, name: "default3")
+    /// Image `default4`.
+    static let default4 = Rswift.ImageResource(bundle: R.hostingBundle, name: "default4")
+    /// Image `default5`.
+    static let default5 = Rswift.ImageResource(bundle: R.hostingBundle, name: "default5")
+    /// Image `default6`.
+    static let default6 = Rswift.ImageResource(bundle: R.hostingBundle, name: "default6")
+    /// Image `default7`.
+    static let default7 = Rswift.ImageResource(bundle: R.hostingBundle, name: "default7")
+    /// Image `default8`.
+    static let default8 = Rswift.ImageResource(bundle: R.hostingBundle, name: "default8")
+    /// Image `default9`.
+    static let default9 = Rswift.ImageResource(bundle: R.hostingBundle, name: "default9")
     /// Image `drop`.
     static let drop = Rswift.ImageResource(bundle: R.hostingBundle, name: "drop")
     /// Image `emptyState`.
@@ -438,6 +493,132 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "bedroom", bundle: ..., traitCollection: ...)`
     static func bedroom(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.bedroom, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "default1", bundle: ..., traitCollection: ...)`
+    static func default1(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.default1, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "default10", bundle: ..., traitCollection: ...)`
+    static func default10(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.default10, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "default11", bundle: ..., traitCollection: ...)`
+    static func default11(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.default11, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "default12", bundle: ..., traitCollection: ...)`
+    static func default12(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.default12, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "default13", bundle: ..., traitCollection: ...)`
+    static func default13(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.default13, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "default14", bundle: ..., traitCollection: ...)`
+    static func default14(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.default14, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "default15", bundle: ..., traitCollection: ...)`
+    static func default15(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.default15, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "default16", bundle: ..., traitCollection: ...)`
+    static func default16(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.default16, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "default17", bundle: ..., traitCollection: ...)`
+    static func default17(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.default17, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "default18", bundle: ..., traitCollection: ...)`
+    static func default18(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.default18, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "default2", bundle: ..., traitCollection: ...)`
+    static func default2(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.default2, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "default3", bundle: ..., traitCollection: ...)`
+    static func default3(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.default3, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "default4", bundle: ..., traitCollection: ...)`
+    static func default4(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.default4, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "default5", bundle: ..., traitCollection: ...)`
+    static func default5(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.default5, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "default6", bundle: ..., traitCollection: ...)`
+    static func default6(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.default6, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "default7", bundle: ..., traitCollection: ...)`
+    static func default7(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.default7, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "default8", bundle: ..., traitCollection: ...)`
+    static func default8(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.default8, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "default9", bundle: ..., traitCollection: ...)`
+    static func default9(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.default9, compatibleWith: traitCollection)
     }
     #endif
 
@@ -590,6 +771,14 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 1 reuse identifiers.
+  struct reuseIdentifier {
+    /// Reuse identifier `defaultPlantImageCell`.
+    static let defaultPlantImageCell: Rswift.ReuseIdentifier<DefaultPlantImageCell> = Rswift.ReuseIdentifier(identifier: "defaultPlantImageCell")
+
+    fileprivate init() {}
+  }
+
   fileprivate struct intern: Rswift.Validatable {
     fileprivate static func validate() throws {
       try _R.validate()
@@ -730,6 +919,7 @@ struct _R: Rswift.Validatable {
       let addPlantPictureController = StoryboardViewControllerResource<AddPlantPictureController>(identifier: "AddPlantPictureController")
       let bundle = R.hostingBundle
       let choosePlantTitleController = StoryboardViewControllerResource<ChoosePlantTitleController>(identifier: "ChoosePlantTitleController")
+      let defaultPlantPicturesController = StoryboardViewControllerResource<DefaultPlantPicturesController>(identifier: "DefaultPlantPicturesController")
       let name = "AddPlant"
       let pickRoomController = StoryboardViewControllerResource<PickRoomController>(identifier: "PickRoomController")
       let setWateringCycleController = StoryboardViewControllerResource<SetWateringCycleController>(identifier: "SetWateringCycleController")
@@ -742,6 +932,10 @@ struct _R: Rswift.Validatable {
         return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: choosePlantTitleController)
       }
 
+      func defaultPlantPicturesController(_: Void = ()) -> DefaultPlantPicturesController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: defaultPlantPicturesController)
+      }
+
       func pickRoomController(_: Void = ()) -> PickRoomController? {
         return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: pickRoomController)
       }
@@ -751,6 +945,7 @@ struct _R: Rswift.Validatable {
       }
 
       static func validate() throws {
+        if UIKit.UIImage(named: "default1", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'default1' is used in storyboard 'AddPlant', but couldn't be loaded.") }
         if UIKit.UIImage(named: "watercolor2", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'watercolor2' is used in storyboard 'AddPlant', but couldn't be loaded.") }
         if UIKit.UIImage(named: "watercolor3", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'watercolor3' is used in storyboard 'AddPlant', but couldn't be loaded.") }
         if #available(iOS 11.0, tvOS 11.0, *) {
@@ -762,6 +957,7 @@ struct _R: Rswift.Validatable {
         }
         if _R.storyboard.addPlant().addPlantPictureController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'addPlantPictureController' could not be loaded from storyboard 'AddPlant' as 'AddPlantPictureController'.") }
         if _R.storyboard.addPlant().choosePlantTitleController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'choosePlantTitleController' could not be loaded from storyboard 'AddPlant' as 'ChoosePlantTitleController'.") }
+        if _R.storyboard.addPlant().defaultPlantPicturesController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'defaultPlantPicturesController' could not be loaded from storyboard 'AddPlant' as 'DefaultPlantPicturesController'.") }
         if _R.storyboard.addPlant().pickRoomController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'pickRoomController' could not be loaded from storyboard 'AddPlant' as 'PickRoomController'.") }
         if _R.storyboard.addPlant().setWateringCycleController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'setWateringCycleController' could not be loaded from storyboard 'AddPlant' as 'SetWateringCycleController'.") }
       }

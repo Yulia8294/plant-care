@@ -40,7 +40,20 @@ class AddPlantPictureController: UIViewController {
     }
     
     @IBAction func didPressUseDefaultButton(_ sender: UIButton) {
-        viewModel.capturedImage = nil
+        //viewModel.capturedImage = nil
+        let controller = R.storyboard.addPlant.defaultPlantPicturesController()!
+        controller.viewModel = viewModel
+        
+        if #available(iOS 15.0, *) {
+            if let presentationController = controller.presentationController as? UISheetPresentationController {
+                presentationController.detents = [.medium()]
+            }
+        } else {
+            // Fallback on earlier versions
+        }
+             
+        self.present(controller, animated: true)
+        
     }
     
     @IBAction func didPressTakePicutreButton(_ sender: UIButton) {
