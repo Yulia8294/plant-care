@@ -356,7 +356,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 37 images.
+  /// This `R.image` struct is generated, and contains static references to 38 images.
   struct image {
     /// Image `Add`.
     static let add = Rswift.ImageResource(bundle: R.hostingBundle, name: "Add")
@@ -424,6 +424,8 @@ struct R: Rswift.Validatable {
     static let office = Rswift.ImageResource(bundle: R.hostingBundle, name: "office")
     /// Image `plantPlaceholder`.
     static let plantPlaceholder = Rswift.ImageResource(bundle: R.hostingBundle, name: "plantPlaceholder")
+    /// Image `planticon1`.
+    static let planticon1 = Rswift.ImageResource(bundle: R.hostingBundle, name: "planticon1")
     /// Image `terrace`.
     static let terrace = Rswift.ImageResource(bundle: R.hostingBundle, name: "terrace")
     /// Image `watercolor1`.
@@ -661,6 +663,13 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "plantPlaceholder", bundle: ..., traitCollection: ...)`
     static func plantPlaceholder(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.plantPlaceholder, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "planticon1", bundle: ..., traitCollection: ...)`
+    static func planticon1(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.planticon1, compatibleWith: traitCollection)
     }
     #endif
 
@@ -946,6 +955,7 @@ struct _R: Rswift.Validatable {
 
       static func validate() throws {
         if UIKit.UIImage(named: "default1", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'default1' is used in storyboard 'AddPlant', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "planticon1", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'planticon1' is used in storyboard 'AddPlant', but couldn't be loaded.") }
         if UIKit.UIImage(named: "watercolor2", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'watercolor2' is used in storyboard 'AddPlant', but couldn't be loaded.") }
         if UIKit.UIImage(named: "watercolor3", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'watercolor3' is used in storyboard 'AddPlant', but couldn't be loaded.") }
         if #available(iOS 11.0, tvOS 11.0, *) {

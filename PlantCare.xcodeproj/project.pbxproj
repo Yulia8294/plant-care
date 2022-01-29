@@ -72,6 +72,7 @@
 		78D928A027A45E4A00F479B8 /* DefaultPlantsImagesCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D9289F27A45E4A00F479B8 /* DefaultPlantsImagesCollectionDataSource.swift */; };
 		78D928A227A4627000F479B8 /* DefaultPlantImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D928A127A4627000F479B8 /* DefaultPlantImageCell.swift */; };
 		78D928A427A469C600F479B8 /* DefaultPlantPicturesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D928A327A469C600F479B8 /* DefaultPlantPicturesController.swift */; };
+		78D928A627A5387E00F479B8 /* StaticData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D928A527A5387E00F479B8 /* StaticData.swift */; };
 		7D358428560EEA2AF6CE56F0 /* Pods_PlantCare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C2D3D9627A53459DF697834 /* Pods_PlantCare.framework */; };
 /* End PBXBuildFile section */
 
@@ -145,6 +146,7 @@
 		78D9289F27A45E4A00F479B8 /* DefaultPlantsImagesCollectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultPlantsImagesCollectionDataSource.swift; sourceTree = "<group>"; };
 		78D928A127A4627000F479B8 /* DefaultPlantImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultPlantImageCell.swift; sourceTree = "<group>"; };
 		78D928A327A469C600F479B8 /* DefaultPlantPicturesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultPlantPicturesController.swift; sourceTree = "<group>"; };
+		78D928A527A5387E00F479B8 /* StaticData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticData.swift; sourceTree = "<group>"; };
 		9C2D3D9627A53459DF697834 /* Pods_PlantCare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlantCare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -242,6 +244,7 @@
 				787BBF8627A183E800763CB7 /* InMemoryStorage.swift */,
 				787BBF9827A29C6B00763CB7 /* InDefaults.swift */,
 				787BBF9A27A29C7E00763CB7 /* InDefaultsStorage.swift */,
+				78D928A527A5387E00F479B8 /* StaticData.swift */,
 			);
 			path = Storage;
 			sourceTree = "<group>";
@@ -590,6 +593,7 @@
 				789D2A3327995D7400154A9F /* RoomsViewModel.swift in Sources */,
 				781001D22799742E00D3EE04 /* MainTabBarController.swift in Sources */,
 				78B7A5F8278A035E00CA1CAB /* AppDelegate.swift in Sources */,
+				78D928A627A5387E00F479B8 /* StaticData.swift in Sources */,
 				781001D9279975E000D3EE04 /* MyTasksCoordinator.swift in Sources */,
 				78B7A617278A114200CA1CAB /* PlantCell.swift in Sources */,
 				78101D1227A1726F00B9A687 /* ShadowView.swift in Sources */,

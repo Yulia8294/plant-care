@@ -29,11 +29,12 @@ class AddPlantInfoViewModel: NSObject {
         }
     }
     
-    @Published var name: String = "Nice Plant" {
+    @Published var name: String = "" {
         didSet {
             print(name)
         }
     }
+    
     @Published var wateringCycle: WateringCycle = .daily
     
     init(coordinator: AddPlantCoordinator) {
