@@ -16,7 +16,7 @@ struct Plant: Codable, Identifiable {
     var dateAquired: Date
     var lastWatering: Date
     var wateringCycle: WateringCycle
-    var room: String
+    var room: Room
 
 }
 

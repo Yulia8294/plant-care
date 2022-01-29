@@ -12,11 +12,14 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlantInfoView" customModule="PlantCare" customModuleProvider="target">
             <connections>
+                <outlet property="lastWateringLabel" destination="oct-v2-sUj" id="qKp-Ba-ea7"/>
+                <outlet property="nextWateringLabel" destination="gmQ-f2-16i" id="QoT-CH-VRd"/>
                 <outlet property="plantImageView" destination="Exp-vL-DUb" id="zdM-vB-ff1"/>
                 <outlet property="progressView" destination="SUb-Lk-vHJ" id="sDf-nM-U2Z"/>
                 <outlet property="roomLabel" destination="hIK-8j-e4r" id="xUZ-7c-Se7"/>
                 <outlet property="titleLabel" destination="F37-sq-e16" id="0Rz-j6-QHo"/>
                 <outlet property="wateringCard" destination="MjR-qN-7mq" id="9tb-kS-lcE"/>
+                <outlet property="wateringDescriptionLabel" destination="0JM-T3-Dh0" id="Msk-tO-3Ns"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

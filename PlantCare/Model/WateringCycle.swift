@@ -13,4 +13,17 @@ enum WateringCycle: CaseIterable, Codable {
     case biweekly
     case monthly
     //case custom(Int)
+    
+    var daysPeriod: TimeInterval {
+        switch self {
+        case .weekly:
+            return 7
+        case .daily:
+            return 1
+        case .biweekly:
+            return 14
+        case .monthly:
+            return 30
+        }
+    }
 }

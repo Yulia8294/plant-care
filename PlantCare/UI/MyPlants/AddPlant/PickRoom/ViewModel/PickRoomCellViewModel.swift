@@ -8,6 +8,6 @@
 import UIKit
 
 struct PickRoomCellViewModel {
-    var image: UIImage
+    var image: UIImage?
     var title: String
 }

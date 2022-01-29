@@ -8,17 +8,19 @@
 import Foundation
 import UIKit
 
-struct Room {
-    let image: UIImage
+struct Room: Codable, Identifiable {
+    
+    let image: ImageData
     let title: String
+    let id: Int
     
     static var defaultRooms: [Room] = [
-        Room(image: R.image.office()!, title: "Office"),
-        Room(image: R.image.kitchen()!, title: "Kitchen"),
-        Room(image: R.image.bathroom()!, title: "Bathroom"),
-        Room(image: R.image.livingroom()!, title: "Living Room"),
-        Room(image: R.image.bedroom()!, title: "Bedroom"),
-        Room(image: R.image.terrace()!, title: "Terrace")
+        Room(image: ImageData(withImage: R.image.office()!), title: "Office", id: 1),
+        Room(image: ImageData(withImage: R.image.kitchen()!), title: "Kitchen", id: 2),
+        Room(image: ImageData(withImage: R.image.bathroom()!), title: "Bathroom", id: 3),
+        Room(image: ImageData(withImage: R.image.livingroom()!), title: "Living Room", id: 4),
+        Room(image: ImageData(withImage: R.image.bedroom()!), title: "Bedroom", id: 5),
+        Room(image: ImageData(withImage: R.image.terrace()!), title: "Terrace", id: 6)
     ]
 }
 
@@ -57,7 +59,8 @@ class RoomsViewModel: NSObject {
     }
     
     func createCellModel(room: Room) -> PickRoomCellViewModel {
-        return PickRoomCellViewModel(image: room.image, title: room.title)
+        return PickRoomCellViewModel(image: room.image.getImage(),
+                                     title: room.title)
     }
     
     func getCellViewModel(at indexPath: IndexPath) -> PickRoomCellViewModel {

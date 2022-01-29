@@ -49,7 +49,6 @@ class PlantImageView: UIImageView {
     }
     
     private func setLayer() {
-        print("set layer")
         let shapeLayer = CAShapeLayer(layer: self.layer)
         shapeLayer.path = self.pathCurvedForView(givenView: self, curvedPercent: curvedPercent).cgPath
         shapeLayer.frame = self.bounds

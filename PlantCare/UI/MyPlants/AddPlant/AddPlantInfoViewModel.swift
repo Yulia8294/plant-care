@@ -22,19 +22,9 @@ class AddPlantInfoViewModel: NSObject {
     
     let placeholderImage = R.image.plantPlaceholder()!
     
-    @Published var room: Room?
-    @Published var capturedImage: UIImage? {
-        didSet {
-            print("New plant image is set")
-        }
-    }
-    
-    @Published var name: String = "" {
-        didSet {
-            print(name)
-        }
-    }
-    
+    @Published var room: Room = .defaultRooms.first!
+    @Published var capturedImage: UIImage?
+    @Published var name: String = ""
     @Published var wateringCycle: WateringCycle = .daily
     
     init(coordinator: AddPlantCoordinator) {
@@ -56,8 +46,20 @@ class AddPlantInfoViewModel: NSObject {
     }
     
     func createPlant() {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy/MM/dd HH:mm"
+        let someDateTime = formatter.date(from: "2022/01/28 11:31")
         let image = ImageData(withImage: capturedImage ?? placeholderImage)
-        let plant = Plant(id: UUID().uuidString, title: name, photo: image, age: 1, dateAquired: Date(), lastWatering: Date(), wateringCycle: wateringCycle, room: room?.title ?? "")
+        
+        let plant = Plant(id: UUID().uuidString,
+                          title: name,
+                          photo: image,
+                          age: 1,
+                          dateAquired: Date(),
+                          lastWatering: someDateTime!,
+                          wateringCycle: wateringCycle,
+                          room: room)
+        
         AppData.myPlants.append(plant)
     }
     

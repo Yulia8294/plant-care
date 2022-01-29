@@ -60,7 +60,7 @@ class MyPlantsViewModel: NSObject {
     }
     
     func getSectionHeaderTitle(for section: Int) -> String {
-        groupedPlants[section].first?.room ?? ""
+        groupedPlants[section].first?.room.title ?? ""
     }
     
     func didPressAddNewPlant() {
@@ -76,7 +76,7 @@ class MyPlantsViewModel: NSObject {
     
     private func groupPlantsByRoom() {
         groupedPlants = Dictionary(grouping: plants, by: { plant in
-            plant.room
+            plant.room.title
         })
             .sorted(by: { $0.key < $1.key })
             .map { $0.value }

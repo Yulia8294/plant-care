@@ -88,6 +88,9 @@
                             <constraint firstItem="sGT-Qf-2t8" firstAttribute="leading" secondItem="aGN-ER-xru" secondAttribute="leading" id="uoI-Ka-JcY"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="plantInfoView" destination="sGT-Qf-2t8" id="dVU-hS-hm8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3hi-Qu-P7q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

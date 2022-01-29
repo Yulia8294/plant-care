@@ -7,14 +7,6 @@
 
 import UIKit
 
-struct PlantDetailViewModel {
-    var name: String
-    var photo: UIImage?
-    var lastWatering: Date?
-    var wateringCycle: WateringCycle
-    var room: String
-}
-
 class PlantInfoViewModel {
     
     private let plant: Plant
@@ -29,8 +21,6 @@ class PlantInfoViewModel {
                                                    photo: plant.photo.getImage(),
                                                    lastWatering: plant.lastWatering,
                                                    wateringCycle: plant.wateringCycle,
-                                                   room: plant.room)
+                                                   roomTitle: plant.room.title)
     }
-    
-    
 }

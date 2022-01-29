@@ -34,6 +34,7 @@ class MyPlantsCoordinator: Coordinator {
     
     func showPlantDetails(_ plant: Plant) {
         let vc = R.storyboard.myPlants.plantInfoController()!
+        vc.viewModel = PlantInfoViewModel(coordinator: self, plant: plant)
         navigationController.pushViewController(vc, animated: true)
     }
     
