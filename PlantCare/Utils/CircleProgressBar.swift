@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CircleProgressBar: View {
     
-    @Binding var progress: Float
+    @EnvironmentObject var progressModel: ProgressViewModel
     
     @State var circleColor: Color = Color(UIColor.accent)
     
@@ -22,7 +22,7 @@ struct CircleProgressBar: View {
                     .foregroundColor(circleColor)
                 
                 Circle()
-                    .trim(from: 0.0, to: CGFloat(min(self.progress, 1.0)))
+                    .trim(from: 0.0, to: CGFloat(min(self.progressModel.progress, 1.0)))
                     .stroke(style: StrokeStyle(lineWidth: 15.0, lineCap: .round, lineJoin: .round))
                     .foregroundColor(circleColor)
                     .rotationEffect(Angle(degrees: 270.0))
@@ -39,7 +39,7 @@ struct CircleProgressBar: View {
 
 struct CircleProgressBar_Previews: PreviewProvider {
     static var previews: some View {
-        CircleProgressBar(progress: Binding.constant(0.3))
+        CircleProgressBar()
     }
 }
 

@@ -16,7 +16,7 @@ class PlantInfoController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavBarAppearance()
-        plantInfoView.setup(with: viewModel.plantViewModel)
+        plantInfoView.setup(with: viewModel)
     }
     
     private func setupNavBarAppearance() {

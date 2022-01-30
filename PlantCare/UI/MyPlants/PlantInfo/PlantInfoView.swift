@@ -7,6 +7,7 @@
 
 import UIKit
 import SwiftUI
+import Combine
 
 class PlantInfoView: XibView {
     
@@ -19,26 +20,43 @@ class PlantInfoView: XibView {
     @IBOutlet weak var nextWateringLabel: UILabel!
     @IBOutlet weak var wateringDescriptionLabel: UILabel!
     
+    var subscriptions = Set<AnyCancellable>()
+    
     override func setup() {
         super.setup()
     }
     
+    var progressModel = ProgressViewModel()
+    
     @discardableResult
-    func setup(with model: PlantDetailViewModel) -> Self {
-        plantImageView.image = model.photo ?? R.image.plantPlaceholder()!
-        roomLabel.text = model.roomTitle
-        titleLabel.text = model.name
-        lastWateringLabel.text = "Last watering: " + model.lastWateringString
-        nextWateringLabel.text = model.nextWatering
-        wateringDescriptionLabel.text = model.wateringCycleMessage
-        setupProgressView(for: model.nextWateringFractionCompleted)
+    func setup(with model: PlantInfoViewModel) -> Self {
+        
+        subscriptions = [
+            model.$name.assign(to: \.text!, on: titleLabel),
+            model.$roomTitle.assign(to: \.text!, on: roomLabel),
+            model.$photo.assign(to: \.image, on: plantImageView),
+            model.lastWateringString.assign(to: \.text!, on: lastWateringLabel),
+            model.nextWateringString.assign(to: \.text!, on: nextWateringLabel),
+            model.wateringCycleDescription.assign(to: \.text!, on: wateringDescriptionLabel),
+            model.nextWateringFractionCompleted.assign(to: \.progress, on: progressModel)
+        ]
+        
+        setupProgressView(for: model)
         return self
     }
     
-    private func setupProgressView(for progress: Float) {
-        let progressCircle = CircleProgressBar(progress: .constant(progress))
+    private func setupProgressView(for model: PlantInfoViewModel) {
+        let progressCircle = CircleProgressBar().environmentObject(progressModel)
         let hosting = UIHostingController(rootView: progressCircle)
         progressView.addSubview(hosting.view)
         hosting.view.frame = progressView.bounds
+    }
+}
+
+class ProgressViewModel: ObservableObject {
+    @Published var progress: Float = 0 {
+        didSet {
+            print("progress \(progress)")
+        }
     }
 }
