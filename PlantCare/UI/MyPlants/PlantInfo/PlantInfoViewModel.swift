@@ -95,10 +95,11 @@ extension PlantInfoViewModel {
         
         let now = Date()
         let diff = daysDiffBetween(now, and: nextWatering)
+        
         if now < nextWatering {
             return "Water in \(diff) days"
         } else {
-            return "Missed watering for \(diff) days"
+            return "Missed watering for \(abs(diff)) days"
         }
     }
     
@@ -107,7 +108,7 @@ extension PlantInfoViewModel {
     //MARK: - Helpers
     
     private func daysDiffBetween(_ lastWatering: Date, and nextWatering: Date) -> Int {
-        let diff = Calendar(identifier: .gregorian).numberOfDaysBetween(lastWatering, and: nextWatering)
+        let diff = Calendar.current.numberOfDaysBetween(lastWatering, and: nextWatering)
         
         if diff == 0 {
             return shouldWaterTomorrow(nextWatering) ? 1 : 0

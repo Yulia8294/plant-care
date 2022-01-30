@@ -48,7 +48,7 @@ class AddPlantInfoViewModel: NSObject {
     func createPlant() {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy/MM/dd HH:mm"
-        let someDateTime = formatter.date(from: "2022/01/28 11:31")
+        let someDateTime = formatter.date(from: "2022/01/29 11:31")
         let image = ImageData(withImage: capturedImage ?? placeholderImage)
         
         let plant = Plant(id: UUID().uuidString,

@@ -18,8 +18,9 @@ extension Date {
 extension Calendar {
     
     func numberOfDaysBetween(_ from: Date, and to: Date) -> Int {
-        let numberOfDays = dateComponents([.day], from: from, to: to)
-        
+        let fromDate = startOfDay(for: from)
+        let toDate = startOfDay(for: to)
+        let numberOfDays = dateComponents([.day], from: fromDate, to: toDate)
         return numberOfDays.day!
     }
 }
