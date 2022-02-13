@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--My Plants-->
+        <scene sceneID="Jnh-Fw-0bV">
+            <objects>
+                <viewController storyboardIdentifier="MyPlantsController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SFv-O8-aYW" customClass="MyPlantsController" customModule="PlantCare" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="77L-7j-pBQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wIL-Ch-KbE">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="NXH-ZO-WRE">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="mke-la-itN">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="b2C-2f-w8z">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Du6-u9-ZM6"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wIL-Ch-KbE" firstAttribute="top" secondItem="Du6-u9-ZM6" secondAttribute="top" id="2IJ-EX-Q3A"/>
+                            <constraint firstItem="wIL-Ch-KbE" firstAttribute="leading" secondItem="Du6-u9-ZM6" secondAttribute="leading" id="Wp4-DS-RyM"/>
+                            <constraint firstItem="Du6-u9-ZM6" firstAttribute="bottom" secondItem="wIL-Ch-KbE" secondAttribute="bottom" id="gPV-zP-DUv"/>
+                            <constraint firstItem="wIL-Ch-KbE" firstAttribute="trailing" secondItem="Du6-u9-ZM6" secondAttribute="trailing" id="wDH-e5-ec7"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="My Plants" image="Explore" id="Mxu-Le-dLG"/>
+                    <navigationItem key="navigationItem" title="My Plants" id="LEz-6v-ZhN">
+                        <barButtonItem key="backBarButtonItem" title=" " id="bx8-xX-dWj"/>
+                        <barButtonItem key="rightBarButtonItem" image="Add" id="ZiC-aH-pR6">
+                            <connections>
+                                <action selector="didPressAddPlantButton:" destination="SFv-O8-aYW" id="MDl-xO-l37"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="plantsCollection" destination="wIL-Ch-KbE" id="8eb-ol-0ol"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iij-cC-hMe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1289.8550724637682" y="-3.3482142857142856"/>
+        </scene>
+        <!--Plant Info Controller-->
+        <scene sceneID="NKm-ZW-n8x">
+            <objects>
+                <viewController storyboardIdentifier="PlantInfoController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gZX-50-xIz" customClass="PlantInfoController" customModule="PlantCare" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EIp-T9-3pj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sGT-Qf-2t8" customClass="PlantInfoView" customModule="PlantCare" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aGN-ER-xru"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aGN-ER-xru" firstAttribute="bottom" secondItem="sGT-Qf-2t8" secondAttribute="bottom" id="AO2-Ou-OYS"/>
+                            <constraint firstItem="sGT-Qf-2t8" firstAttribute="top" secondItem="EIp-T9-3pj" secondAttribute="top" id="VHJ-Yl-HKM"/>
+                            <constraint firstItem="sGT-Qf-2t8" firstAttribute="trailing" secondItem="aGN-ER-xru" secondAttribute="trailing" id="eGI-lp-ECb"/>
+                            <constraint firstItem="sGT-Qf-2t8" firstAttribute="leading" secondItem="aGN-ER-xru" secondAttribute="leading" id="uoI-Ka-JcY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="plantInfoView" destination="sGT-Qf-2t8" id="dVU-hS-hm8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3hi-Qu-P7q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2315" y="-8"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Add" width="24" height="24"/>
+        <image name="Explore" width="16" height="23"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

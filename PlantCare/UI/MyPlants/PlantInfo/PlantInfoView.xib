@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlantInfoView" customModule="PlantCare" customModuleProvider="target">
+            <connections>
+                <outlet property="lastWateringLabel" destination="oct-v2-sUj" id="qKp-Ba-ea7"/>
+                <outlet property="nextWateringLabel" destination="gmQ-f2-16i" id="QoT-CH-VRd"/>
+                <outlet property="plantImageView" destination="Exp-vL-DUb" id="zdM-vB-ff1"/>
+                <outlet property="progressView" destination="SUb-Lk-vHJ" id="sDf-nM-U2Z"/>
+                <outlet property="roomLabel" destination="hIK-8j-e4r" id="xUZ-7c-Se7"/>
+                <outlet property="titleLabel" destination="F37-sq-e16" id="0Rz-j6-QHo"/>
+                <outlet property="wateringCard" destination="MjR-qN-7mq" id="9tb-kS-lcE"/>
+                <outlet property="wateringDescriptionLabel" destination="0JM-T3-Dh0" id="Msk-tO-3Ns"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plantPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="Exp-vL-DUb" customClass="PlantImageView" customModule="PlantCare" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="380"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="380" id="y3c-0G-e3L"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="curvedPercent">
+                            <real key="value" value="0.12"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fTK-oH-k2j">
+                    <rect key="frame" x="0.0" y="365" width="414" height="531"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Papaver Somniferum" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F37-sq-e16">
+                            <rect key="frame" x="16" y="0.0" width="382" height="31.5"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
+                            <color key="textColor" name="DarkSecondAccent"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Room" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIK-8j-e4r">
+                            <rect key="frame" x="16" y="34.5" width="382" height="21.5"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                            <color key="textColor" name="SecondaryText"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MjR-qN-7mq" customClass="PlantCardView" customModule="PlantCare" customModuleProvider="target">
+                            <rect key="frame" x="16" y="86" width="382" height="200"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Watering" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mO4-Xy-ktk">
+                                    <rect key="frame" x="16" y="16" width="68.5" height="19.5"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                    <color key="textColor" name="Accent"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ncL-7B-Tr1">
+                                    <rect key="frame" x="286" y="42" width="80" height="116.5"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SUb-Lk-vHJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="80" id="7uj-tb-Y7c"/>
+                                                <constraint firstAttribute="width" constant="80" id="ZvB-xR-N3h"/>
+                                            </constraints>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Water in 5 days" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gmQ-f2-16i">
+                                            <rect key="frame" x="0.0" y="90" width="80" height="26.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" name="DarkSecondAccent"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="N70-Ti-GRP">
+                                    <rect key="frame" x="16" y="69.5" width="260" height="61"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This plant watering cycle is set to weekly" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0JM-T3-Dh0">
+                                            <rect key="frame" x="0.0" y="0.0" width="260" height="36"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" name="PrimaryText"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last watering: 5 days ago" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oct-v2-sUj">
+                                            <rect key="frame" x="0.0" y="44" width="260" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" name="SecondaryText"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="ncL-7B-Tr1" firstAttribute="centerY" secondItem="MjR-qN-7mq" secondAttribute="centerY" id="1zq-Qj-tg1"/>
+                                <constraint firstItem="mO4-Xy-ktk" firstAttribute="top" secondItem="MjR-qN-7mq" secondAttribute="top" constant="16" id="5Oi-px-OXY"/>
+                                <constraint firstAttribute="height" constant="200" id="Qtj-CM-PVO"/>
+                                <constraint firstItem="mO4-Xy-ktk" firstAttribute="leading" secondItem="MjR-qN-7mq" secondAttribute="leading" constant="16" id="Ux1-Vh-092"/>
+                                <constraint firstItem="ncL-7B-Tr1" firstAttribute="leading" secondItem="N70-Ti-GRP" secondAttribute="trailing" constant="10" id="W2Q-mn-bOb"/>
+                                <constraint firstItem="N70-Ti-GRP" firstAttribute="top" relation="greaterThanOrEqual" secondItem="mO4-Xy-ktk" secondAttribute="bottom" constant="20" id="aC3-9K-LnL"/>
+                                <constraint firstItem="N70-Ti-GRP" firstAttribute="leading" secondItem="mO4-Xy-ktk" secondAttribute="leading" id="aXR-Gv-pq9"/>
+                                <constraint firstItem="N70-Ti-GRP" firstAttribute="centerY" secondItem="MjR-qN-7mq" secondAttribute="centerY" id="aXY-BW-dis"/>
+                                <constraint firstAttribute="trailing" secondItem="ncL-7B-Tr1" secondAttribute="trailing" constant="16" id="gHe-O2-IJW"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="MjR-qN-7mq" firstAttribute="leading" secondItem="F37-sq-e16" secondAttribute="leading" id="3VJ-5x-PRf"/>
+                        <constraint firstItem="MjR-qN-7mq" firstAttribute="trailing" secondItem="F37-sq-e16" secondAttribute="trailing" id="4TZ-R0-ILq"/>
+                        <constraint firstItem="F37-sq-e16" firstAttribute="top" secondItem="fTK-oH-k2j" secondAttribute="top" id="Guy-9I-DR7"/>
+                        <constraint firstItem="F37-sq-e16" firstAttribute="leading" secondItem="fTK-oH-k2j" secondAttribute="leading" constant="16" id="Ksy-ic-IW1"/>
+                        <constraint firstAttribute="trailing" secondItem="F37-sq-e16" secondAttribute="trailing" constant="16" id="OG9-Ir-K1M"/>
+                        <constraint firstItem="hIK-8j-e4r" firstAttribute="leading" secondItem="F37-sq-e16" secondAttribute="leading" id="TED-f8-bRn"/>
+                        <constraint firstItem="MjR-qN-7mq" firstAttribute="top" secondItem="hIK-8j-e4r" secondAttribute="bottom" constant="30" id="cGd-QM-h5Z"/>
+                        <constraint firstItem="hIK-8j-e4r" firstAttribute="trailing" secondItem="F37-sq-e16" secondAttribute="trailing" id="oM9-EJ-d3f"/>
+                        <constraint firstItem="hIK-8j-e4r" firstAttribute="top" secondItem="F37-sq-e16" secondAttribute="bottom" constant="3" id="yKD-CF-eur"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="fTK-oH-k2j" secondAttribute="bottom" id="0w2-IC-iJb"/>
+                <constraint firstItem="fTK-oH-k2j" firstAttribute="top" secondItem="Exp-vL-DUb" secondAttribute="bottom" constant="-15" id="6wQ-b5-h0G"/>
+                <constraint firstItem="fTK-oH-k2j" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="7gP-nd-BiU"/>
+                <constraint firstItem="Exp-vL-DUb" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="CoN-Us-nQR"/>
+                <constraint firstItem="fTK-oH-k2j" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ZKA-TJ-sq3"/>
+                <constraint firstItem="Exp-vL-DUb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="fxH-wr-kUf"/>
+                <constraint firstItem="Exp-vL-DUb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ozx-uG-iUp"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="120.53571428571428"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="Exp-vL-DUb">
+            <size key="intrinsicContentSize" width="800" height="624"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="plantPlaceholder" width="800" height="624"/>
+        <namedColor name="Accent">
+            <color red="0.097999997437000275" green="0.2630000114440918" blue="0.17599999904632568" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="DarkSecondAccent">
+            <color red="0.31000000238418579" green="0.28200000524520874" blue="0.37999999523162842" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="PrimaryText">
+            <color red="0.024000000208616257" green="0.086000002920627594" blue="0.13699999451637268" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SecondaryText">
+            <color red="0.46299999952316284" green="0.45500001311302185" blue="0.54500001668930054" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

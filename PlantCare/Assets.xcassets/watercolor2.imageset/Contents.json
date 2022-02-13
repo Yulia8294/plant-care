@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "watercolor-painting-olive-branch-green-leaves-eae9a831861d2b05975117f497d9af91.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
