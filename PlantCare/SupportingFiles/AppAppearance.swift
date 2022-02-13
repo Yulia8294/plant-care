@@ -12,6 +12,12 @@ extension UIColor {
     static var accent = R.color.accent()!
     static var primaryText = R.color.primaryText()!
     static var secondaryText = R.color.secondaryText()!
+    static var background = R.color.background()!
+    static var backgroundDarker = R.color.backgroundDarker()!
+    static var darkSecondAccent = R.color.darkSecondAccent()!
+    static var lightAccent = R.color.lightAccent()!
+    static var secondAccent = R.color.secondAccent()!
+    static var secondAccentBackground = R.color.secondAccentBackground()!
 }
 
 struct AppAppearance {
@@ -46,8 +52,16 @@ struct AppAppearance {
         appearance.configureWithOpaqueBackground()
       //  appearance.shadowImage = R.image.shadow()!
         appearance.backgroundColor = .white
-
+        appearance.shadowColor = .accent
+       
         tabBar.tintColor = R.color.accent()
         tabBar.unselectedItemTintColor = R.color.backgroundDarker()
+        
+        UITabBar.appearance().standardAppearance = appearance
+        if #available(iOS 15.0, *) {
+            UITabBar.appearance().scrollEdgeAppearance = appearance
+        } else {
+            // Fallback on earlier versions
+        }
     }
 }

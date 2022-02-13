@@ -16,6 +16,10 @@ class PlantInfoViewModel {
     @Published var wateringCycle: WateringCycle = .daily
     @Published var roomTitle: String = ""
     
+    private var id: String {
+        plant.id
+    }
+    
     lazy var wateringCycleDescription: AnyPublisher<String, Never> = {
         $wateringCycle
             .map { self.message(for: $0) }
@@ -41,9 +45,9 @@ class PlantInfoViewModel {
     }()
     
     private var plant: Plant
-    private let coordinator: MyPlantsCoordinator
+    private let coordinator: MyPlantsCoordinator?
         
-    init(coordinator: MyPlantsCoordinator, plant: Plant) {
+    init(coordinator: MyPlantsCoordinator? = nil, plant: Plant) {
         self.coordinator = coordinator
         self.plant = plant
         self.configureOutput()
@@ -63,8 +67,16 @@ class PlantInfoViewModel {
             AppData.myPlants[index].lastWatering = lastWatering
         }
     }
+}
 
+extension PlantInfoViewModel: Hashable {
+    static func == (lhs: PlantInfoViewModel, rhs: PlantInfoViewModel) -> Bool {
+        lhs.id == rhs.id
+    }
     
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
 }
 
 //MARK: - Dates handling

@@ -704,7 +704,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.nib` struct is generated, and contains static references to 5 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 6 nibs.
   struct nib {
     /// Nib `HeaderView`.
     static let headerView = _R.nib._HeaderView()
@@ -714,6 +714,8 @@ struct R: Rswift.Validatable {
     static let plantCell = _R.nib._PlantCell()
     /// Nib `PlantInfoView`.
     static let plantInfoView = _R.nib._PlantInfoView()
+    /// Nib `TaskCell`.
+    static let taskCell = _R.nib._TaskCell()
     /// Nib `WateringCell`.
     static let wateringCell = _R.nib._WateringCell()
 
@@ -750,6 +752,14 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
+    /// `UINib(name: "TaskCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.taskCell) instead")
+    static func taskCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.taskCell)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UINib(name: "WateringCell", in: bundle)`
     @available(*, deprecated, message: "Use UINib(resource: R.nib.wateringCell) instead")
     static func wateringCell(_: Void = ()) -> UIKit.UINib {
@@ -771,6 +781,10 @@ struct R: Rswift.Validatable {
 
     static func plantInfoView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
       return R.nib.plantInfoView.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+    }
+
+    static func taskCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> TaskCell? {
+      return R.nib.taskCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? TaskCell
     }
 
     static func wateringCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> WateringCell? {
@@ -884,6 +898,17 @@ struct _R: Rswift.Validatable {
           if UIKit.UIColor(named: "PrimaryText", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'PrimaryText' is used in nib 'PlantInfoView', but couldn't be loaded.") }
           if UIKit.UIColor(named: "SecondaryText", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'SecondaryText' is used in nib 'PlantInfoView', but couldn't be loaded.") }
         }
+      }
+
+      fileprivate init() {}
+    }
+
+    struct _TaskCell: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "TaskCell"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> TaskCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? TaskCell
       }
 
       fileprivate init() {}

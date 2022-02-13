@@ -20,19 +20,28 @@ struct Plant: Codable, Identifiable {
 
 }
 
-struct ImageData: Codable {
-    let imageData: Data?
+extension Plant {
     
-    init(withImage image: UIImage) {
-        self.imageData = image.jpegData(compressionQuality: 0.3)
-    }
-
-    func getImage() -> UIImage? {
-        guard let imageData = self.imageData else {
-            return nil
-        }
-        let image = UIImage(data: imageData)
-        
-        return image
+    var nextWatering: Date {
+        lastWatering.addingTimeInterval(60 * 60 * 24 * wateringCycle.daysPeriod)
     }
 }
+
+extension Array where Element == Plant {
+    
+    var waterInLessThan3Days: [Element] {
+        self.filter { $0.nextWatering < Date().addingTimeInterval(-(60 * 60 * 24 * 3))}
+    }
+}
+
+extension Plant: Hashable {
+    
+    static func == (lhs: Plant, rhs: Plant) -> Bool {
+        lhs.id == rhs.id
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+}
+

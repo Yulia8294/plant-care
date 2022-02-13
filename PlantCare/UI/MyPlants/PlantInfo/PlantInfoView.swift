@@ -20,14 +20,14 @@ class PlantInfoView: XibView {
     @IBOutlet weak var nextWateringLabel: UILabel!
     @IBOutlet weak var wateringDescriptionLabel: UILabel!
     
-    var subscriptions = Set<AnyCancellable>()
+    private var subscriptions = Set<AnyCancellable>()
     private var model: PlantInfoViewModel!
-    
+    private var progressModel = ProgressViewModel()
+
     override func setup() {
         super.setup()
     }
     
-    var progressModel = ProgressViewModel()
     
     @discardableResult
     func setup(with model: PlantInfoViewModel) -> Self {
@@ -48,7 +48,7 @@ class PlantInfoView: XibView {
     }
     
     private func setupProgressView(for model: PlantInfoViewModel) {
-        let progressCircle = CircleProgressBar().environmentObject(progressModel)
+        let progressCircle = CircleProgressBar(progressModel: progressModel)
         let hosting = UIHostingController(rootView: progressCircle)
         progressView.addSubview(hosting.view)
         hosting.view.frame = progressView.bounds
@@ -60,9 +60,22 @@ class PlantInfoView: XibView {
 }
 
 class ProgressViewModel: ObservableObject {
+    
+    @Published var color: UIColor = .accent
+    @Published var strokeWidth: CGFloat = 15
     @Published var progress: Float = 0 {
         didSet {
             print("progress \(progress)")
         }
+    }
+    
+    init() {
+        
+    }
+    
+    init(color: UIColor, strokeWidth: CGFloat, progress: Float) {
+        self.color = color
+        self.strokeWidth = strokeWidth
+        self.progress = progress
     }
 }

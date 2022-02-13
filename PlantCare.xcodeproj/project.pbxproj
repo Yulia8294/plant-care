@@ -41,6 +41,10 @@
 		787BBFA227A2BE2E00763CB7 /* PlantImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787BBFA127A2BE2E00763CB7 /* PlantImageView.swift */; };
 		787BBFA427A2C72400763CB7 /* XibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787BBFA327A2C72400763CB7 /* XibView.swift */; };
 		788415F227B8E5E0007E3B96 /* PlantsCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788415F127B8E5E0007E3B96 /* PlantsCollectionLayout.swift */; };
+		788415F827B8F5CE007E3B96 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788415F627B8F5CE007E3B96 /* TaskCell.swift */; };
+		788415F927B8F5CE007E3B96 /* TaskCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 788415F727B8F5CE007E3B96 /* TaskCell.xib */; };
+		788415FB27B8F7FD007E3B96 /* ImageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788415FA27B8F7FD007E3B96 /* ImageData.swift */; };
+		788415FD27B95682007E3B96 /* PlantSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788415FC27B95682007E3B96 /* PlantSection.swift */; };
 		7889FDCD27A2DC2600B949F8 /* PlantCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7889FDCC27A2DC2600B949F8 /* PlantCardView.swift */; };
 		7889FDCF27A2E18700B949F8 /* CircleProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7889FDCE27A2E18700B949F8 /* CircleProgressBar.swift */; };
 		789C319A27A01B6F00177FED /* WateringCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789C319927A01B6F00177FED /* WateringCycle.swift */; };
@@ -114,6 +118,10 @@
 		787BBFA127A2BE2E00763CB7 /* PlantImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantImageView.swift; sourceTree = "<group>"; };
 		787BBFA327A2C72400763CB7 /* XibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibView.swift; sourceTree = "<group>"; };
 		788415F127B8E5E0007E3B96 /* PlantsCollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantsCollectionLayout.swift; sourceTree = "<group>"; };
+		788415F627B8F5CE007E3B96 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
+		788415F727B8F5CE007E3B96 /* TaskCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskCell.xib; sourceTree = "<group>"; };
+		788415FA27B8F7FD007E3B96 /* ImageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageData.swift; sourceTree = "<group>"; };
+		788415FC27B95682007E3B96 /* PlantSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantSection.swift; sourceTree = "<group>"; };
 		7889FDCC27A2DC2600B949F8 /* PlantCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantCardView.swift; sourceTree = "<group>"; };
 		7889FDCE27A2E18700B949F8 /* CircleProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleProgressBar.swift; sourceTree = "<group>"; };
 		789C319927A01B6F00177FED /* WateringCycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WateringCycle.swift; sourceTree = "<group>"; };
@@ -185,6 +193,7 @@
 		781001D32799759D00D3EE04 /* MyTasks */ = {
 			isa = PBXGroup;
 			children = (
+				788415F527B8F5BC007E3B96 /* TaskCell */,
 				781001D4279975A900D3EE04 /* MyTasksController.swift */,
 				781001D6279975B000D3EE04 /* MyTasks.storyboard */,
 				781001D8279975E000D3EE04 /* MyTasksCoordinator.swift */,
@@ -267,6 +276,15 @@
 				7889FDCC27A2DC2600B949F8 /* PlantCardView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		788415F527B8F5BC007E3B96 /* TaskCell */ = {
+			isa = PBXGroup;
+			children = (
+				788415F627B8F5CE007E3B96 /* TaskCell.swift */,
+				788415F727B8F5CE007E3B96 /* TaskCell.xib */,
+			);
+			path = TaskCell;
 			sourceTree = "<group>";
 		};
 		789C319E27A03AA400177FED /* Choose Title */ = {
@@ -426,6 +444,8 @@
 			children = (
 				78B7A62F278A29CA00CA1CAB /* Plant.swift */,
 				789C319927A01B6F00177FED /* WateringCycle.swift */,
+				788415FA27B8F7FD007E3B96 /* ImageData.swift */,
+				788415FC27B95682007E3B96 /* PlantSection.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -515,6 +535,7 @@
 				781001D7279975B000D3EE04 /* MyTasks.storyboard in Resources */,
 				78B7A618278A114200CA1CAB /* PlantCell.xib in Resources */,
 				787BBF8C27A1AE9400763CB7 /* HeaderView.xib in Resources */,
+				788415F927B8F5CE007E3B96 /* TaskCell.xib in Resources */,
 				78B7A604278A035F00CA1CAB /* LaunchScreen.storyboard in Resources */,
 				78B7A627278A1EE900CA1CAB /* AddPlant.storyboard in Resources */,
 				78B7A601278A035F00CA1CAB /* Assets.xcassets in Resources */,
@@ -625,6 +646,7 @@
 				78B7A633278A2D0F00CA1CAB /* PlantInfoController.swift in Sources */,
 				789C319A27A01B6F00177FED /* WateringCycle.swift in Sources */,
 				781001DB279975F600D3EE04 /* MyTasksViewModel.swift in Sources */,
+				788415FB27B8F7FD007E3B96 /* ImageData.swift in Sources */,
 				78B7A630278A29CA00CA1CAB /* Plant.swift in Sources */,
 				78B7A61F278A12F400CA1CAB /* UICollectionViewTools.swift in Sources */,
 				78B7A637278A2D2E00CA1CAB /* PlantInfoView.swift in Sources */,
@@ -634,11 +656,13 @@
 				789D2A292799577800154A9F /* PickRoomController.swift in Sources */,
 				78B7A629278A24D800CA1CAB /* R.generated.swift in Sources */,
 				787BBF9927A29C6B00763CB7 /* InDefaults.swift in Sources */,
+				788415F827B8F5CE007E3B96 /* TaskCell.swift in Sources */,
 				781001E727998D6400D3EE04 /* MediaPicker.swift in Sources */,
 				7877132827A5A5D30049942C /* DateTools.swift in Sources */,
 				78D928A427A469C600F479B8 /* DefaultPlantPicturesController.swift in Sources */,
 				787BBF9427A298FB00763CB7 /* UIColor+Encoding.swift in Sources */,
 				789D2A2C279957AD00154A9F /* PickRoomCell.swift in Sources */,
+				788415FD27B95682007E3B96 /* PlantSection.swift in Sources */,
 				78B7A60C278A0A4900CA1CAB /* AppAppearance.swift in Sources */,
 				789C31A327A03EA000177FED /* ChoosePlantTitleController.swift in Sources */,
 				787BBF8727A183E800763CB7 /* InMemoryStorage.swift in Sources */,

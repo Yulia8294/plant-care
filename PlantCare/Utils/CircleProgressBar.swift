@@ -6,25 +6,24 @@
 //
 
 import SwiftUI
+import Combine
 
 struct CircleProgressBar: View {
     
-    @EnvironmentObject var progressModel: ProgressViewModel
-    
-    @State var circleColor: Color = Color(UIColor.accent)
-    
+    @ObservedObject var progressModel: ProgressViewModel
+        
     var body: some View {
         GeometryReader { geometry in
             ZStack {
                 Circle()
-                    .stroke(lineWidth: 15)
+                    .stroke(lineWidth: progressModel.strokeWidth)
                     .opacity(0.3)
-                    .foregroundColor(circleColor)
+                    .foregroundColor(Color(progressModel.color))
                 
                 Circle()
                     .trim(from: 0.0, to: CGFloat(min(self.progressModel.progress, 1.0)))
-                    .stroke(style: StrokeStyle(lineWidth: 15.0, lineCap: .round, lineJoin: .round))
-                    .foregroundColor(circleColor)
+                    .stroke(style: StrokeStyle(lineWidth: progressModel.strokeWidth, lineCap: .round, lineJoin: .round))
+                    .foregroundColor(Color(progressModel.color))
                     .rotationEffect(Angle(degrees: 270.0))
                     .animation(.linear)
                 
@@ -33,13 +32,14 @@ struct CircleProgressBar: View {
                     .frame(width: geometry.size.width * 0.3, height: geometry.size.width * 0.3, alignment: .center)
                 
             }
+            .padding(5)
         }
     }
 }
 
 struct CircleProgressBar_Previews: PreviewProvider {
     static var previews: some View {
-        CircleProgressBar()
+        CircleProgressBar(progressModel: ProgressViewModel())
     }
 }
 

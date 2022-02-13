@@ -24,8 +24,7 @@ class MyTasksCoordinator: Coordinator {
     
     func start() {
         let myTasksController = R.storyboard.myTasks.myTasksController()!
-        let myTasksViewModel = MyTasksViewModel()
-        myTasksViewModel.coordinator = self
+        let myTasksViewModel = MyTasksViewModel(coordinator: self)
         myTasksController.viewModel = myTasksViewModel
         navigationController.viewControllers = [myTasksController]
     }
