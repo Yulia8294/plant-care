@@ -27,117 +27,191 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plantPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="Exp-vL-DUb" customClass="PlantImageView" customModule="PlantCare" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="380"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="380" id="y3c-0G-e3L"/>
-                    </constraints>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="curvedPercent">
-                            <real key="value" value="0.12"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                </imageView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fTK-oH-k2j">
-                    <rect key="frame" x="0.0" y="365" width="414" height="531"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wrD-u0-7QF">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Papaver Somniferum" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F37-sq-e16">
-                            <rect key="frame" x="16" y="0.0" width="382" height="31.5"/>
-                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
-                            <color key="textColor" name="DarkSecondAccent"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Room" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIK-8j-e4r">
-                            <rect key="frame" x="16" y="34.5" width="382" height="21.5"/>
-                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                            <color key="textColor" name="SecondaryText"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MjR-qN-7mq" customClass="PlantCardView" customModule="PlantCare" customModuleProvider="target">
-                            <rect key="frame" x="16" y="86" width="382" height="200"/>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plantPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="Exp-vL-DUb" customClass="PlantImageView" customModule="PlantCare" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="380"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="380" id="y3c-0G-e3L"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="curvedPercent">
+                                    <real key="value" value="0.12"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </imageView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fTK-oH-k2j">
+                            <rect key="frame" x="0.0" y="365" width="414" height="531"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Watering" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mO4-Xy-ktk">
-                                    <rect key="frame" x="16" y="16" width="68.5" height="19.5"/>
-                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
-                                    <color key="textColor" name="Accent"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Papaver Somniferum" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F37-sq-e16">
+                                    <rect key="frame" x="16" y="0.0" width="382" height="31.5"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
+                                    <color key="textColor" name="DarkSecondAccent"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ncL-7B-Tr1">
-                                    <rect key="frame" x="286" y="42" width="80" height="116.5"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Room" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIK-8j-e4r">
+                                    <rect key="frame" x="16" y="34.5" width="48.5" height="21.5"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                    <color key="textColor" name="SecondaryText"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MjR-qN-7mq" customClass="PlantCardView" customModule="PlantCare" customModuleProvider="target">
+                                    <rect key="frame" x="16" y="281" width="382" height="200"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SUb-Lk-vHJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="80" id="7uj-tb-Y7c"/>
-                                                <constraint firstAttribute="width" constant="80" id="ZvB-xR-N3h"/>
-                                            </constraints>
-                                        </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Water in 5 days" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gmQ-f2-16i">
-                                            <rect key="frame" x="0.0" y="90" width="80" height="26.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                            <color key="textColor" name="DarkSecondAccent"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Watering" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mO4-Xy-ktk">
+                                            <rect key="frame" x="16" y="16" width="68.5" height="19.5"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                            <color key="textColor" name="Accent"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ncL-7B-Tr1">
+                                            <rect key="frame" x="292" y="42" width="80" height="116.5"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SUb-Lk-vHJ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="80" id="7uj-tb-Y7c"/>
+                                                        <constraint firstAttribute="width" constant="80" id="ZvB-xR-N3h"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Water in 5 days" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gmQ-f2-16i">
+                                                    <rect key="frame" x="0.0" y="90" width="80" height="26.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" name="DarkSecondAccent"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="N70-Ti-GRP">
+                                            <rect key="frame" x="16" y="69.5" width="266" height="61"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This plant watering cycle is set to weekly" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0JM-T3-Dh0">
+                                                    <rect key="frame" x="0.0" y="0.0" width="266" height="36"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" name="PrimaryText"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last watering: 5 days ago" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oct-v2-sUj">
+                                                    <rect key="frame" x="0.0" y="44" width="266" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" name="SecondaryText"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
                                     </subviews>
-                                </stackView>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="N70-Ti-GRP">
-                                    <rect key="frame" x="16" y="69.5" width="260" height="61"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="ncL-7B-Tr1" firstAttribute="centerY" secondItem="MjR-qN-7mq" secondAttribute="centerY" id="1zq-Qj-tg1"/>
+                                        <constraint firstItem="mO4-Xy-ktk" firstAttribute="top" secondItem="MjR-qN-7mq" secondAttribute="top" constant="16" id="5Oi-px-OXY"/>
+                                        <constraint firstAttribute="height" constant="200" id="Qtj-CM-PVO"/>
+                                        <constraint firstItem="mO4-Xy-ktk" firstAttribute="leading" secondItem="MjR-qN-7mq" secondAttribute="leading" constant="16" id="Ux1-Vh-092"/>
+                                        <constraint firstAttribute="trailing" secondItem="ncL-7B-Tr1" secondAttribute="trailing" constant="10" id="VUs-nX-SCV"/>
+                                        <constraint firstItem="ncL-7B-Tr1" firstAttribute="leading" secondItem="N70-Ti-GRP" secondAttribute="trailing" constant="10" id="W2Q-mn-bOb"/>
+                                        <constraint firstItem="N70-Ti-GRP" firstAttribute="top" relation="greaterThanOrEqual" secondItem="mO4-Xy-ktk" secondAttribute="bottom" constant="20" id="aC3-9K-LnL"/>
+                                        <constraint firstItem="N70-Ti-GRP" firstAttribute="leading" secondItem="mO4-Xy-ktk" secondAttribute="leading" id="aXR-Gv-pq9"/>
+                                        <constraint firstItem="N70-Ti-GRP" firstAttribute="centerY" secondItem="MjR-qN-7mq" secondAttribute="centerY" id="aXY-BW-dis"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pcb-s8-36d" customClass="PlantCardView" customModule="PlantCare" customModuleProvider="target">
+                                    <rect key="frame" x="16" y="76" width="382" height="180"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This plant watering cycle is set to weekly" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0JM-T3-Dh0">
-                                            <rect key="frame" x="0.0" y="0.0" width="260" height="36"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                            <color key="textColor" name="PrimaryText"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tasks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="50R-oa-3fE">
+                                            <rect key="frame" x="16" y="16" width="43.5" height="19.5"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                            <color key="textColor" name="Accent"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last watering: 5 days ago" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oct-v2-sUj">
-                                            <rect key="frame" x="0.0" y="44" width="260" height="17"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <color key="textColor" name="SecondaryText"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="GHm-47-YLK">
+                                            <rect key="frame" x="16" y="72.5" width="350" height="70"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="drop" translatesAutoresizingMaskIntoConstraints="NO" id="UFM-Wg-OX1">
+                                                    <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                                    <color key="backgroundColor" name="LightAccent"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="70" id="3EW-c7-T3V"/>
+                                                        <constraint firstAttribute="height" constant="70" id="4Bn-Fg-yys"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="35"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Watering" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M66-EW-C7b">
+                                                    <rect key="frame" x="80" y="26" width="210" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" name="PrimaryText"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6eR-rF-KBV">
+                                                    <rect key="frame" x="300" y="10" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="Fmn-qF-aGW"/>
+                                                        <constraint firstAttribute="height" constant="50" id="d6l-cD-96m"/>
+                                                    </constraints>
+                                                    <color key="tintColor" name="LightAccent"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" title="Button" image="check_circle"/>
+                                                    <connections>
+                                                        <action selector="didPressWaterPlant:" destination="-1" eventType="touchUpInside" id="3Zm-BF-1G5"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
                                     </subviews>
-                                </stackView>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="GHm-47-YLK" firstAttribute="leading" secondItem="pcb-s8-36d" secondAttribute="leading" constant="16" id="5rv-8P-gsw"/>
+                                        <constraint firstAttribute="bottom" secondItem="GHm-47-YLK" secondAttribute="bottom" constant="37.5" id="7QO-Sj-VWT"/>
+                                        <constraint firstAttribute="height" constant="180" id="Q50-da-5hL"/>
+                                        <constraint firstItem="GHm-47-YLK" firstAttribute="top" relation="greaterThanOrEqual" secondItem="50R-oa-3fE" secondAttribute="bottom" constant="20" id="WOK-NW-mxx"/>
+                                        <constraint firstItem="50R-oa-3fE" firstAttribute="leading" secondItem="pcb-s8-36d" secondAttribute="leading" constant="16" id="j7q-Mv-Zq6"/>
+                                        <constraint firstAttribute="trailing" secondItem="GHm-47-YLK" secondAttribute="trailing" constant="16" id="oK8-aR-nUV"/>
+                                        <constraint firstItem="50R-oa-3fE" firstAttribute="top" secondItem="pcb-s8-36d" secondAttribute="top" constant="16" id="qrn-ZH-epH"/>
+                                    </constraints>
+                                </view>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstItem="ncL-7B-Tr1" firstAttribute="centerY" secondItem="MjR-qN-7mq" secondAttribute="centerY" id="1zq-Qj-tg1"/>
-                                <constraint firstItem="mO4-Xy-ktk" firstAttribute="top" secondItem="MjR-qN-7mq" secondAttribute="top" constant="16" id="5Oi-px-OXY"/>
-                                <constraint firstAttribute="height" constant="200" id="Qtj-CM-PVO"/>
-                                <constraint firstItem="mO4-Xy-ktk" firstAttribute="leading" secondItem="MjR-qN-7mq" secondAttribute="leading" constant="16" id="Ux1-Vh-092"/>
-                                <constraint firstItem="ncL-7B-Tr1" firstAttribute="leading" secondItem="N70-Ti-GRP" secondAttribute="trailing" constant="10" id="W2Q-mn-bOb"/>
-                                <constraint firstItem="N70-Ti-GRP" firstAttribute="top" relation="greaterThanOrEqual" secondItem="mO4-Xy-ktk" secondAttribute="bottom" constant="20" id="aC3-9K-LnL"/>
-                                <constraint firstItem="N70-Ti-GRP" firstAttribute="leading" secondItem="mO4-Xy-ktk" secondAttribute="leading" id="aXR-Gv-pq9"/>
-                                <constraint firstItem="N70-Ti-GRP" firstAttribute="centerY" secondItem="MjR-qN-7mq" secondAttribute="centerY" id="aXY-BW-dis"/>
-                                <constraint firstAttribute="trailing" secondItem="ncL-7B-Tr1" secondAttribute="trailing" constant="16" id="gHe-O2-IJW"/>
+                                <constraint firstItem="MjR-qN-7mq" firstAttribute="top" secondItem="pcb-s8-36d" secondAttribute="bottom" constant="25" id="Ao0-y4-BqR"/>
+                                <constraint firstAttribute="trailing" secondItem="F37-sq-e16" secondAttribute="trailing" constant="16" id="JOd-R4-2PC"/>
+                                <constraint firstItem="pcb-s8-36d" firstAttribute="top" secondItem="hIK-8j-e4r" secondAttribute="bottom" constant="20" id="PJu-4W-tZI"/>
+                                <constraint firstItem="F37-sq-e16" firstAttribute="leading" secondItem="fTK-oH-k2j" secondAttribute="leading" constant="16" id="PTg-y5-Ihh"/>
+                                <constraint firstItem="F37-sq-e16" firstAttribute="top" secondItem="fTK-oH-k2j" secondAttribute="top" id="SVB-dA-jxD"/>
+                                <constraint firstAttribute="trailing" secondItem="pcb-s8-36d" secondAttribute="trailing" constant="16" id="Sos-vN-BlL"/>
+                                <constraint firstItem="pcb-s8-36d" firstAttribute="leading" secondItem="F37-sq-e16" secondAttribute="leading" id="UXU-AV-q8N"/>
+                                <constraint firstItem="hIK-8j-e4r" firstAttribute="leading" secondItem="F37-sq-e16" secondAttribute="leading" id="lsz-30-FIe"/>
+                                <constraint firstItem="pcb-s8-36d" firstAttribute="leading" secondItem="MjR-qN-7mq" secondAttribute="leading" id="sjI-RX-x89"/>
+                                <constraint firstAttribute="bottom" secondItem="MjR-qN-7mq" secondAttribute="bottom" constant="50" id="tZx-nd-2jW"/>
+                                <constraint firstItem="hIK-8j-e4r" firstAttribute="top" secondItem="F37-sq-e16" secondAttribute="bottom" constant="3" id="yKD-CF-eur"/>
+                                <constraint firstAttribute="trailing" secondItem="MjR-qN-7mq" secondAttribute="trailing" constant="16" id="zLq-lo-JAD"/>
                             </constraints>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstItem="MjR-qN-7mq" firstAttribute="leading" secondItem="F37-sq-e16" secondAttribute="leading" id="3VJ-5x-PRf"/>
-                        <constraint firstItem="MjR-qN-7mq" firstAttribute="trailing" secondItem="F37-sq-e16" secondAttribute="trailing" id="4TZ-R0-ILq"/>
-                        <constraint firstItem="F37-sq-e16" firstAttribute="top" secondItem="fTK-oH-k2j" secondAttribute="top" id="Guy-9I-DR7"/>
-                        <constraint firstItem="F37-sq-e16" firstAttribute="leading" secondItem="fTK-oH-k2j" secondAttribute="leading" constant="16" id="Ksy-ic-IW1"/>
-                        <constraint firstAttribute="trailing" secondItem="F37-sq-e16" secondAttribute="trailing" constant="16" id="OG9-Ir-K1M"/>
-                        <constraint firstItem="hIK-8j-e4r" firstAttribute="leading" secondItem="F37-sq-e16" secondAttribute="leading" id="TED-f8-bRn"/>
-                        <constraint firstItem="MjR-qN-7mq" firstAttribute="top" secondItem="hIK-8j-e4r" secondAttribute="bottom" constant="30" id="cGd-QM-h5Z"/>
-                        <constraint firstItem="hIK-8j-e4r" firstAttribute="trailing" secondItem="F37-sq-e16" secondAttribute="trailing" id="oM9-EJ-d3f"/>
-                        <constraint firstItem="hIK-8j-e4r" firstAttribute="top" secondItem="F37-sq-e16" secondAttribute="bottom" constant="3" id="yKD-CF-eur"/>
+                        <constraint firstItem="fTK-oH-k2j" firstAttribute="leading" secondItem="wrD-u0-7QF" secondAttribute="leading" id="5w6-Kn-JbP"/>
+                        <constraint firstAttribute="bottom" secondItem="fTK-oH-k2j" secondAttribute="bottom" id="Fcz-fn-EmD"/>
+                        <constraint firstAttribute="trailing" secondItem="fTK-oH-k2j" secondAttribute="trailing" id="ajM-IY-GZW"/>
+                        <constraint firstItem="Exp-vL-DUb" firstAttribute="leading" secondItem="wrD-u0-7QF" secondAttribute="leading" id="dp5-H8-LlS"/>
+                        <constraint firstAttribute="trailing" secondItem="Exp-vL-DUb" secondAttribute="trailing" id="ePL-tJ-cHZ"/>
+                        <constraint firstItem="Exp-vL-DUb" firstAttribute="top" secondItem="wrD-u0-7QF" secondAttribute="top" id="oen-w1-Wez"/>
+                        <constraint firstItem="fTK-oH-k2j" firstAttribute="top" secondItem="Exp-vL-DUb" secondAttribute="bottom" constant="-15" id="ppH-I7-VV3"/>
                     </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="fTK-oH-k2j" secondAttribute="bottom" id="0w2-IC-iJb"/>
-                <constraint firstItem="fTK-oH-k2j" firstAttribute="top" secondItem="Exp-vL-DUb" secondAttribute="bottom" constant="-15" id="6wQ-b5-h0G"/>
-                <constraint firstItem="fTK-oH-k2j" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="7gP-nd-BiU"/>
-                <constraint firstItem="Exp-vL-DUb" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="CoN-Us-nQR"/>
-                <constraint firstItem="fTK-oH-k2j" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ZKA-TJ-sq3"/>
-                <constraint firstItem="Exp-vL-DUb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="fxH-wr-kUf"/>
-                <constraint firstItem="Exp-vL-DUb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ozx-uG-iUp"/>
+                <constraint firstItem="wrD-u0-7QF" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="Xmy-Pa-lVT"/>
+                <constraint firstAttribute="bottom" secondItem="wrD-u0-7QF" secondAttribute="bottom" id="kNv-vO-YMQ"/>
+                <constraint firstItem="wrD-u0-7QF" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="o64-bN-gJ7"/>
+                <constraint firstItem="wrD-u0-7QF" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="rQP-d5-9if"/>
+                <constraint firstItem="wrD-u0-7QF" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="rkf-Ub-z6T"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="120.53571428571428"/>
         </view>
@@ -148,12 +222,17 @@
         </designable>
     </designables>
     <resources>
+        <image name="check_circle" width="50" height="50"/>
+        <image name="drop" width="262.75900268554688" height="262.75900268554688"/>
         <image name="plantPlaceholder" width="800" height="624"/>
         <namedColor name="Accent">
             <color red="0.097999997437000275" green="0.2630000114440918" blue="0.17599999904632568" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="DarkSecondAccent">
             <color red="0.31000000238418579" green="0.28200000524520874" blue="0.37999999523162842" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LightAccent">
+            <color red="0.3059999942779541" green="0.43900001049041748" blue="0.39599999785423279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="PrimaryText">
             <color red="0.024000000208616257" green="0.086000002920627594" blue="0.13699999451637268" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

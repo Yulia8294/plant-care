@@ -21,6 +21,7 @@ class PlantInfoView: XibView {
     @IBOutlet weak var wateringDescriptionLabel: UILabel!
     
     var subscriptions = Set<AnyCancellable>()
+    private var model: PlantInfoViewModel!
     
     override func setup() {
         super.setup()
@@ -30,6 +31,7 @@ class PlantInfoView: XibView {
     
     @discardableResult
     func setup(with model: PlantInfoViewModel) -> Self {
+        self.model = model
         
         subscriptions = [
             model.$name.assign(to: \.text!, on: titleLabel),
@@ -50,6 +52,10 @@ class PlantInfoView: XibView {
         let hosting = UIHostingController(rootView: progressCircle)
         progressView.addSubview(hosting.view)
         hosting.view.frame = progressView.bounds
+    }
+    
+    @IBAction func didPressWaterPlant(_ sender: UIButton) {
+        model.didPressWaterPlant()
     }
 }
 

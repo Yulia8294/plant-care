@@ -362,8 +362,6 @@ struct R: Rswift.Validatable {
     static let add = Rswift.ImageResource(bundle: R.hostingBundle, name: "Add")
     /// Image `Articles`.
     static let articles = Rswift.ImageResource(bundle: R.hostingBundle, name: "Articles")
-    /// Image `Camera`.
-    static let camera = Rswift.ImageResource(bundle: R.hostingBundle, name: "Camera")
     /// Image `Explore`.
     static let explore = Rswift.ImageResource(bundle: R.hostingBundle, name: "Explore")
     /// Image `Image`.
@@ -376,6 +374,8 @@ struct R: Rswift.Validatable {
     static let bathroom = Rswift.ImageResource(bundle: R.hostingBundle, name: "bathroom")
     /// Image `bedroom`.
     static let bedroom = Rswift.ImageResource(bundle: R.hostingBundle, name: "bedroom")
+    /// Image `check_circle`.
+    static let check_circle = Rswift.ImageResource(bundle: R.hostingBundle, name: "check_circle")
     /// Image `default10`.
     static let default10 = Rswift.ImageResource(bundle: R.hostingBundle, name: "default10")
     /// Image `default11`.
@@ -450,13 +450,6 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "Camera", bundle: ..., traitCollection: ...)`
-    static func camera(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.camera, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "Explore", bundle: ..., traitCollection: ...)`
     static func explore(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.explore, compatibleWith: traitCollection)
@@ -495,6 +488,13 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "bedroom", bundle: ..., traitCollection: ...)`
     static func bedroom(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.bedroom, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "check_circle", bundle: ..., traitCollection: ...)`
+    static func check_circle(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.check_circle, compatibleWith: traitCollection)
     }
     #endif
 
@@ -874,10 +874,13 @@ struct _R: Rswift.Validatable {
       }
 
       static func validate() throws {
+        if UIKit.UIImage(named: "check_circle", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'check_circle' is used in nib 'PlantInfoView', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "drop", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'drop' is used in nib 'PlantInfoView', but couldn't be loaded.") }
         if UIKit.UIImage(named: "plantPlaceholder", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'plantPlaceholder' is used in nib 'PlantInfoView', but couldn't be loaded.") }
         if #available(iOS 11.0, tvOS 11.0, *) {
           if UIKit.UIColor(named: "Accent", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'Accent' is used in nib 'PlantInfoView', but couldn't be loaded.") }
           if UIKit.UIColor(named: "DarkSecondAccent", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'DarkSecondAccent' is used in nib 'PlantInfoView', but couldn't be loaded.") }
+          if UIKit.UIColor(named: "LightAccent", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'LightAccent' is used in nib 'PlantInfoView', but couldn't be loaded.") }
           if UIKit.UIColor(named: "PrimaryText", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'PrimaryText' is used in nib 'PlantInfoView', but couldn't be loaded.") }
           if UIKit.UIColor(named: "SecondaryText", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'SecondaryText' is used in nib 'PlantInfoView', but couldn't be loaded.") }
         }

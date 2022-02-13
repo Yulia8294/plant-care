@@ -16,23 +16,6 @@ class PlantInfoViewModel {
     @Published var wateringCycle: WateringCycle = .daily
     @Published var roomTitle: String = ""
     
-    private let plant: Plant
-    private let coordinator: MyPlantsCoordinator
-        
-    init(coordinator: MyPlantsCoordinator, plant: Plant) {
-        self.coordinator = coordinator
-        self.plant = plant
-        self.configureOutput()
-    }
-    
-    private func configureOutput() {
-        name = plant.title
-        photo = plant.photo.getImage() ?? R.image.plantPlaceholder()!
-        lastWatering = plant.lastWatering
-        wateringCycle = plant.wateringCycle
-        roomTitle = plant.room.title
-    }
-    
     lazy var wateringCycleDescription: AnyPublisher<String, Never> = {
         $wateringCycle
             .map { self.message(for: $0) }
@@ -56,6 +39,31 @@ class PlantInfoViewModel {
             .map { self.fractionCompleted(last: $0, cycle: $1) }
             .eraseToAnyPublisher()
     }()
+    
+    private var plant: Plant
+    private let coordinator: MyPlantsCoordinator
+        
+    init(coordinator: MyPlantsCoordinator, plant: Plant) {
+        self.coordinator = coordinator
+        self.plant = plant
+        self.configureOutput()
+    }
+    
+    private func configureOutput() {
+        name = plant.title
+        photo = plant.photo.getImage() ?? R.image.plantPlaceholder()!
+        lastWatering = plant.lastWatering
+        wateringCycle = plant.wateringCycle
+        roomTitle = plant.room.title
+    }
+    
+    func didPressWaterPlant() {
+        lastWatering = Date()
+        if let index = AppData.myPlants.firstIndex(where: { $0.id == plant.id }) {
+            AppData.myPlants[index].lastWatering = lastWatering
+        }
+    }
+
     
 }
 
