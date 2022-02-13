@@ -40,6 +40,7 @@
 		787BBF9F27A2B88000763CB7 /* PlantInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787BBF9E27A2B88000763CB7 /* PlantInfoViewModel.swift */; };
 		787BBFA227A2BE2E00763CB7 /* PlantImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787BBFA127A2BE2E00763CB7 /* PlantImageView.swift */; };
 		787BBFA427A2C72400763CB7 /* XibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787BBFA327A2C72400763CB7 /* XibView.swift */; };
+		788415F227B8E5E0007E3B96 /* PlantsCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788415F127B8E5E0007E3B96 /* PlantsCollectionLayout.swift */; };
 		7889FDCD27A2DC2600B949F8 /* PlantCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7889FDCC27A2DC2600B949F8 /* PlantCardView.swift */; };
 		7889FDCF27A2E18700B949F8 /* CircleProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7889FDCE27A2E18700B949F8 /* CircleProgressBar.swift */; };
 		789C319A27A01B6F00177FED /* WateringCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789C319927A01B6F00177FED /* WateringCycle.swift */; };
@@ -113,6 +114,7 @@
 		787BBF9E27A2B88000763CB7 /* PlantInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantInfoViewModel.swift; sourceTree = "<group>"; };
 		787BBFA127A2BE2E00763CB7 /* PlantImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantImageView.swift; sourceTree = "<group>"; };
 		787BBFA327A2C72400763CB7 /* XibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibView.swift; sourceTree = "<group>"; };
+		788415F127B8E5E0007E3B96 /* PlantsCollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantsCollectionLayout.swift; sourceTree = "<group>"; };
 		7889FDCC27A2DC2600B949F8 /* PlantCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantCardView.swift; sourceTree = "<group>"; };
 		7889FDCE27A2E18700B949F8 /* CircleProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleProgressBar.swift; sourceTree = "<group>"; };
 		789C319927A01B6F00177FED /* WateringCycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WateringCycle.swift; sourceTree = "<group>"; };
@@ -382,6 +384,7 @@
 				787BBF8E27A1B0A500763CB7 /* PlantCell */,
 				787BBF8827A1AE7D00763CB7 /* HeaderView */,
 				78B7A61B278A129300CA1CAB /* PlantsCollectionDataSource.swift */,
+				788415F127B8E5E0007E3B96 /* PlantsCollectionLayout.swift */,
 			);
 			path = MyPlantsCollection;
 			sourceTree = "<group>";
@@ -612,6 +615,7 @@
 				78101D0B27A1716A00B9A687 /* SetWateringCycleController.swift in Sources */,
 				787BBF8A27A1AE8500763CB7 /* HeaderView.swift in Sources */,
 				78D928A027A45E4A00F479B8 /* DefaultPlantsImagesCollectionDataSource.swift in Sources */,
+				788415F227B8E5E0007E3B96 /* PlantsCollectionLayout.swift in Sources */,
 				787BBFA427A2C72400763CB7 /* XibView.swift in Sources */,
 				781001E02799836800D3EE04 /* AddPlantPictureController.swift in Sources */,
 				787BBF9B27A29C7E00763CB7 /* InDefaultsStorage.swift in Sources */,
